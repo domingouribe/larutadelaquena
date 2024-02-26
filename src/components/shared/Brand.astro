@@ -1,0 +1,42 @@
+---
+import { SITE_TITLE } from "../../consts";
+---
+
+<div class="Brand">
+	<a class="Brand-tag" href="/">{SITE_TITLE}</a>
+	<p class="Brand-description">Luthier Domingo Uribe</p>
+</div>
+
+<style lang="scss">
+	.Brand {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+
+		&-tag {
+			font-size: 1.2em;
+			color: #222;
+			font-weight: bold;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		&-description {
+			color: #222;
+		}
+
+		&-tag a,
+		&-tag a.active {
+			text-decoration: none;
+		}
+
+		@media screen and (max-width: 500px) {
+			&-tag {
+				font-size: 1rem;
+			}
+			&-description {
+				display: none;
+			}
+		}
+	}
+</style>

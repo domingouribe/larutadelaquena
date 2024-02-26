@@ -1,0 +1,30 @@
+---
+import Bars from "./Bars.astro";
+import Brand from "./Brand.astro";
+import Navigation from "./Navigation.astro";
+---
+
+<header class="Header">
+	<Navigation />
+	<div class="Container">
+		<Brand tag="Domingo Uribe" ocupation="Desarrollador Web" />
+		<Bars />
+	</div>
+</header>
+
+<style lang="scss">
+	.Header {
+		background: var(--uiYellow);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		z-index: 5;
+		width: 100vw;
+		height: 63px;
+	}
+</style>

@@ -1,0 +1,168 @@
+@use './normalize';
+
+:root {
+    --main-font: 'Urbanist Variable',
+        sans-serif;
+    //Colors: 
+    --uiGreen: rgb(0, 196, 140);
+    --uiYellow: rgb(255, 207, 92);
+    --uiBlue: rgb(102, 181, 248);
+    --uiWhite: #f0f0f0;
+    --uiGray: rgb(224, 224, 224);
+    --uiGrayMedium: rgb(133, 133, 133);
+    --uiGrayDark: rgb(39, 39, 39);
+    --uiBlack: rgb(0, 0, 0);
+    --uiPink: rgb(255, 100, 124);
+    --uiPurple: rgb(192, 163, 255);
+    --uiBrown: rgb(128, 70, 23);
+    --uiPurple: rgba(13, 0, 15, 0.8);
+
+}
+
+html {
+    font-family: var(--main-font);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    line-height: 1.7;
+    height: 100vh;
+    font-size: 17px;
+    background-color: var(--uiBlack);
+    color: var(--uiWhite);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-top: 63px;
+}
+
+a {
+    color: var(--uiWhite);
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--uiYellow);
+    }
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.Container {
+    display: inherit;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    flex: inherit;
+    flex-flow: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    padding: 0 1em;
+    position: relative;
+    gap: inherit;
+}
+
+.Page {
+    background-color: var(--uiWhite);
+    padding: 0;
+
+    &-title {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    &-description {
+        font-size: 1.1rem;
+        margin: 0;
+    }
+
+    .Post-image {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Tablet Styles */
+    @media only screen and (max-width: 768px) {
+        &-title {
+            font-size: 1.5rem;
+            /* Ajusta el tamaño del título para tablet */
+        }
+
+        &-description {
+            font-size: 1rem;
+        }
+    }
+
+    /* Mobile Styles */
+    @media only screen and (max-width: 480px) {
+        &-title {
+            font-size: 1.5rem;
+            /* Ajusta el tamaño del título para dispositivos móviles */
+        }
+
+        &-description {
+            font-size: 1rem;
+            /* Ajusta el tamaño de la descripción para dispositivos móviles */
+        }
+    }
+}
+
+.Disclaimer {
+    position: relative;
+
+    .Disclaimer-text {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -182px;
+        background-color: var(--uiYellow);
+        padding: 10px;
+        border-radius: .5em;
+        z-index: 2;
+        font-size: .8rem;
+        color: #000;
+        width: 270px;
+        font-weight: 400;
+    }
+
+
+    .Disclaimer-icon {
+        cursor: pointer;
+        color: var(--uiYellow);
+    }
+
+    .Disclaimer-icon:hover+.Disclaimer-text,
+    .Disclaimer-icon:focus+.Disclaimer-text {
+        display: block;
+    }
+}
+
+.SocialIcon {
+    width: 24px;
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+article {
+    flex: 1
+}

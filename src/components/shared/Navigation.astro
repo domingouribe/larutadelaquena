@@ -1,0 +1,69 @@
+---
+
+---
+
+<nav class="Navigation">
+	<a href="/" class="Navigation-link">Home</a>
+	<a href="/about" class="Navigation-link">Acerca de mí</a>
+	<a href="/catalog" class="Navigation-link">Catálogo</a>
+	<a href="/education" class="Navigation-link">Cursos y Masterclass</a>
+	<a href="/blog" class="Navigation-link">Blog</a>
+	<a href="/contact" class="Navigation-link">Contáctame</a>
+</nav>
+
+<style lang="scss">
+	.Navigation {
+		opacity: 0;
+		display: flex;
+		background: transparent;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 63px;
+		width: 50%;
+		height: 0vh;
+		transition: all ease-in-out 0.3s;
+		overflow: hidden;
+		pointer-events: none;
+
+		&-link {
+			color: white;
+			text-decoration: none;
+			font-size: 3rem;
+			padding: 0.4em 0;
+			font-size: 1.5rem;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			&-link {
+				font-size: 1.2rem;
+			}
+		}
+
+		@media screen and (max-width: 420px) {
+			&-link {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.isActive {
+		display: flex;
+		opacity: 1;
+		width: 100%;
+		height: 100vh;
+		background-color: rgb(24, 6, 58);
+		pointer-events: all;
+
+		@media screen and (max-width: 420px) {
+			width: 50%;
+			height: 50vh;
+		}
+	}
+</style>

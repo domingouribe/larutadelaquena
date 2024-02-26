@@ -1,0 +1,27 @@
+---
+import Button from "../components/shared/Button.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+	title="Pago no realizado"
+	description="El pago no se ha efectuado correctamente">
+	<section class="Contact">
+		<div class="Container">
+			<div class="Page">
+				<article class="Article">
+					<h2>Pago vía Flow erróneo</h2>
+					<p>
+						No se ha realizado el pago correctamente. Vuelve a intentarlo o
+						comunícate conmigo mediante mi página de <Button
+							link="/contact"
+							buttonText="Contacto"
+							classes="Button Button-lg"
+							target="_self"
+						/>
+					</p>
+				</article>
+			</div>
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,23 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<nav class="Nav">
+	<HeaderLink href="/">Inicio</HeaderLink>
+	<HeaderLink href="/about">Acerca de mí</HeaderLink>
+	<HeaderLink href="/blog">Blog</HeaderLink>
+	<HeaderLink href="/contact">Contacto</HeaderLink>
+</nav>
+
+<style lang="scss">
+	.Nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+        @media screen and (max-width: 440px) {
+			flex-flow: column nowrap;
+            flex: 1;
+		}
+	}
+</style>

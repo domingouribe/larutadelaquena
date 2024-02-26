@@ -1,0 +1,42 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+	id?: string;
+}
+const { title, description, id } = Astro.props;
+---
+
+<section class:list={["Section"]} id={id}>
+	<div class="Container">
+		<h2 class="Section-title">{title && title}</h2>
+		<p class="Section-description">{description && description}</p>
+		<slot />
+	</div>
+</section>
+
+<style lang="scss">
+	.Section {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 2em;
+		justify-content: space-between;
+
+		&-title {
+			text-align: left;
+			flex-grow: 2;
+			width: 100%;
+			color: var(--ivoryWhite);
+			font-size: 2rem;
+			margin: 5rem 0 0 0;
+			line-height: 1;
+		}
+		&-description {
+			color: var(--ivoryWhite);
+			width: 100%;
+			font-size: 1.1rem;
+			line-height: 1;
+			margin: 0;
+		}
+	}
+</style>

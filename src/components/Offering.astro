@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import DisclaimerIcon from "../components/shared/DisclaimerIcon.astro";
+interface Props {
+	imagePath: string;
+	altText: string;
+	title: string;
+	description: string;
+	clpPrice: string;
+	usdPrice?: string;
+}
+const { imagePath, altText, title, description, clpPrice } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/images/*.{jpeg,jpg,png,gif,svg}"
+);
+if (!images[imagePath])
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "/src/assets/images/*.{jpeg,jpg,png,gif,svg}"`
+	);
+---
+
+<div class="Offering">
+	<div class="OfferingImageBox">
+		<Image
+			src={images[imagePath]()}
+			alt={altText}
+			width={280}
+			height={400}
+			class="Offering-image"
+		/>
+	</div>
+	<div class="Offering-text">
+		<h1 class="Offering-title">{title}</h1>
+		<p class="Offering-description">{description}</p>
+		<div class="Offering-price">
+			<span class="CLP">CLP $</span>
+			{clpPrice}
+			<div class="Disclaimer">
+				<DisclaimerIcon />
+				<small class="Disclaimer-text">
+					Este precio no incluye gastos de envíos locales o internacionales, ni
+					gastos de empaque ni transporte, ni comisiones de PayPal u otros
+					servicios de pagos internacionales. Contáctame y consulta por formas
+					de envío y sus costos.
+				</small>
+			</div>
+		</div>
+
+		<div class="Offering-buttons">
+			<slot />
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	.Offering {
+		display: flex;
+		width: 280px;
+		background-color: var(--uiGrayDark);
+		height: fit-content;
+		color: whitesmoke;
+		gap: 1em;
+		border-radius: 1em;
+		overflow: hidden;
+		flex-grow: 1;
+		flex-flow: column nowrap;
+		justify-content: center;
+		text-align: left;
+
+		.OfferingImageBox {
+			overflow: hidden;
+		}
+
+		&-image {
+			object-fit: cover;
+			display: block;
+			width: 100%;
+			height: 320px;
+			transition: all ease 0.3s;
+
+			&:hover {
+				scale: 1.1;
+				overflow: hidden;
+			}
+		}
+		&-text {
+			padding: 1em;
+			display: flex;
+			flex-flow: column nowrap;
+			gap: 1em;
+			min-height: 370px;
+		}
+		&-title {
+			margin: 0;
+			font-size: 1.1rem;
+			font-weight: normal;
+			font-weight: bolder;
+			text-transform: uppercase;
+		}
+		&-description {
+			margin: 0;
+			font-size: 1rem;
+		}
+		&-price {
+			font-size: 2rem;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			gap: 0.3em;
+			margin: 0;
+		}
+		.CLP {
+			font-weight: 400;
+			font-size: 1rem;
+		}
+
+		&-buttons {
+			display: flex;
+			gap: 1em;
+			justify-content: flex-start;
+		}
+	}
+</style>

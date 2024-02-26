@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BannerLink from "../components/BannerLink.astro";
+import Button from "../components/shared/Button.astro";
+import SectionArea from "../components/SectionArea.astro";
+---
+
+<Layout
+	title="Educación - Mis Cursos y Masterclass"
+	description="Conoce mis Cursos de luthería y Masterclass técnicas">
+	<SectionArea
+		id="education"
+		title="Cursos y talleres"
+		description="Conoce mis cursos online vigentes">
+		<BannerLink
+			title="Taller Online: ¿Son necesarias las fórmulas para fabricar quenas?"
+			text="Comparto mi punto de vista al respecto y enseño un ejercicio de desarrollo de habilidades imprescindible para artesanos y fabricantes de flautas y quenas">
+			<iframe
+				src="https://www.youtube.com/embed/5o5whl7DgOE?si=-Djw4BoMaFF7h0bd"
+				title="YouTube video player"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen></iframe>
+			<Button
+				classes="Button Button-sm"
+				link="/posts/taller-online-formulas/"
+				buttonText="Inscríbete"
+				target="_self"
+			/>
+		</BannerLink>
+
+		<BannerLink
+			title="Curso de lutheria profesional: Fabricación de quenas de alta calidad"
+			text="Este es mi Curso más completo que ya cuenta con alumnos de diversas partes del mundo aprendiendo mis métodos de diseño, fabricación y afinación de la quena de alta calidad">
+			<Button
+				classes="Button Button-sm"
+				link="/posts/taller-online-formulas/"
+				buttonText="Inscríbete"
+				target="_self"
+			/>
+		</BannerLink>
+	</SectionArea>
+</Layout>
+
+<style lang="scss">
+	iframe {
+		border: none;
+		min-height: 220px;
+	}
+</style>

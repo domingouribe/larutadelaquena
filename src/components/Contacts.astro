@@ -1,0 +1,92 @@
+---
+import WhatsApp from "./social-icons/WhatsApp.astro";
+import Facebook from "./social-icons/Facebook.astro";
+import Instagram from "./social-icons/Instagram.astro";
+import YouTube from "./social-icons/YouTube.astro";
+import Email from "./social-icons/Email.astro";
+
+interface Props {
+	whatsappNumber: string;
+	emailAddress: string;
+	facebookUrl: string;
+	instagramUrl: string;
+	youtubeUrl: string;
+}
+
+const { whatsappNumber, emailAddress, facebookUrl, instagramUrl, youtubeUrl } =
+	Astro.props;
+---
+
+<div class="Contacts">
+	<div class="Contacts-item">
+		<a target="_blank" href={whatsappNumber}>
+			<p>WhatsApp</p>
+			<WhatsApp />
+		</a>
+	</div>
+	<div class="Contacts-item">
+		<a target="_blank" href={instagramUrl}>
+			<p>Instagram</p>
+			<Instagram />
+		</a>
+	</div>
+	<div class="Contacts-item">
+		<a target="_blank" href={facebookUrl}>
+			<p>Facebook</p>
+			<Facebook />
+		</a>
+	</div>
+	<div class="Contacts-item">
+		<a target="_blank" href={youtubeUrl}>
+			<p>YouTube</p>
+			<YouTube />
+		</a>
+	</div>
+	<div class="Contacts-item">
+		<a target="_blank" href={emailAddress}>
+			<p>eMail</p>
+			<Email />
+		</a>
+	</div>
+</div>
+
+<style lang="scss">
+	.Contacts {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+		flex: 1;
+
+		&-item {
+			background-color: var(--darkBrown);
+			display: flex;
+			flex-flow: column nowrap;
+			color: white;
+			padding: 0.5em;
+			align-items: center;
+			justify-content: center;
+			flex-grow: 1;
+			transition: all 0.2s ease;
+
+			&:hover {
+				scale: 1.2;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+				margin: 0;
+				display: inherit;
+				flex-flow: inherit;
+				justify-content: inherit;
+				align-items: inherit;
+			}
+			p {
+				margin: 0;
+				font-size: small;
+			}
+		}
+	}
+</style>
