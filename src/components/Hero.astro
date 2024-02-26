@@ -5,138 +5,142 @@ import Button from "./shared/Button.astro";
 import { slide } from "astro:transitions";
 
 interface Props {
-  title: string;
-  preTitle: string;
-  body: string;
+	title: string;
+	preTitle: string;
+	body: string;
 }
 
 const { preTitle, title, body } = Astro.props;
 ---
 
 <div class="Hero" transition:animate={slide({ duration: "0.8s" })}>
-  <div class="Container">
-    <div class="Hero-content">
-      <p class="Hero-pretitle">{preTitle}</p>
-      <h2 class="Hero-title">{title}</h2>
-      <p class="Hero-body">{body}</p>
-      <div class="Buttons">
-        <Button
-          classes="Button Button-md"
-          link="/catalog"
-          buttonText="Mira mi Catálogo"
-          target="_self"
-        />
-        <Button
-          classes="Button Button-md"
-          link="https://www.youtube.com/@domingouribe"
-          buttonText="Sígueme en YouTube"
-          target="_blank"
-        />
-      </div>
-    </div>
-    <Image
-      src={HeroBackgroundImg}
-      alt="Imagen de fondo con dos quenas"
-      width={400}
-      height={300}
-      class="Hero-image"
-    />
-  </div>
+	<div class="Container">
+		<div class="Hero-content">
+			<p class="Hero-pretitle">{preTitle}</p>
+			<h2 class="Hero-title">{title}</h2>
+			<p class="Hero-body">{body}</p>
+			<div class="Buttons">
+				<Button
+					classes="Button Button-md"
+					link="/catalog"
+					buttonText="Mira mi Catálogo"
+					target="_self"
+				/>
+				<Button
+					classes="Button Button-md"
+					link="https://www.youtube.com/@domingouribe"
+					buttonText="Sígueme en YouTube"
+					target="_blank"
+				/>
+			</div>
+		</div>
+		<Image
+			src={HeroBackgroundImg}
+			alt="Imagen de fondo con dos quenas"
+			width={400}
+			height={300}
+			class="Hero-image"
+		/>
+	</div>
 </div>
 <style lang="scss">
-  .Hero {
-    display: flex;
-    width: 100%;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
+	.Hero {
+		display: flex;
+		width: 100%;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-start;
 
-    overflow: hidden;
-    padding: 3em 0 0;
-    gap: 2em;
+		overflow: hidden;
+		padding: 3em 0 0;
+		gap: 2em;
 
-    &-content {
-      display: flex;
-      flex-flow: column;
-      gap: 1em;
-      color: whitesmoke;
-      flex: 2;
-      order: 1;
-      .Buttons {
-        display: flex;
-        gap: 2em;
-      }
-    }
-    &-image {
-      display: block;
-      object-fit: cover;
-      flex: 1;
-      border-radius: 0.5em;
-      order: 2;
-    }
-
-    &-pretitle {
-      margin: 0 0 -0.8em 0;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    &-title {
-      font-size: 4rem;
-      font-weight: 900;
-      margin: 0;
-      line-height: normal;
-      text-transform: uppercase;
-    }
-
-    &-body {
-      margin: 0;
-    }
-
-
-    @media screen and (max-width: 930px) {
-      &-image {
-        flex: 1;
-        width: 100%;
-        height: auto;
-        margin-top: 1em;
-      }
-      &-content {
-        padding: 1em;
-		flex: auto;
-      }
-
-      &-pretitle {
-        font-size: 1.5rem;
-      }
-
-      &-title {
-        font-size: 2.5rem;
-      }
-    }
-
-    @media screen and (max-width: 440px) {
-      padding-top: 1em;
-
-      &-pretitle {
-        font-size: 1.2rem;
-      }
-
-      &-title {
-        font-size: 2rem;
-      }
-
-      &-image {
-        margin-top: 1em;
-      }
-
-	  .Buttons {
-		flex-flow: column nowrap;
-
-		.Button {
-			flex-grow: 1;
+		&-content {
+			display: flex;
+			flex-flow: column;
+			gap: 1em;
+			color: whitesmoke;
+			flex: 2;
+			order: 1;
+			.Buttons {
+				display: flex;
+				gap: 2em;
+			}
 		}
-	  }
-    }
-  }
+		&-image {
+			display: block;
+			object-fit: cover;
+			flex: 1;
+			border-radius: 0.5em;
+			order: 2;
+
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			aspect-ratio: 19/9;
+		}
+
+		&-pretitle {
+			margin: 0 0 -0.8em 0;
+			font-size: 2rem;
+			font-weight: bold;
+		}
+
+		&-title {
+			font-size: 4rem;
+			font-weight: 900;
+			margin: 0;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+
+		&-body {
+			margin: 0;
+		}
+
+		@media screen and (max-width: 930px) {
+			&-image {
+				flex: 1;
+				width: 100%;
+				height: auto;
+				margin-top: 1em;
+			}
+			&-content {
+				padding: 1em;
+				flex: auto;
+			}
+
+			&-pretitle {
+				font-size: 1.5rem;
+			}
+
+			&-title {
+				font-size: 2.5rem;
+			}
+		}
+
+		@media screen and (max-width: 440px) {
+			padding-top: 1em;
+
+			&-pretitle {
+				font-size: 1.2rem;
+			}
+
+			&-title {
+				font-size: 2rem;
+			}
+
+			&-image {
+				margin-top: 1em;
+			}
+
+			.Buttons {
+				flex-flow: column nowrap;
+
+				.Button {
+					flex-grow: 1;
+				}
+			}
+		}
+	}
 </style>

@@ -9,14 +9,14 @@ const { title, id } = Astro.props;
 <section class:list={["Section"]} id={id}>
 	<div class="Container">
 		<h1 class="Section-title">{title && title}</h1>
+		<slot />
 	</div>
-	<slot />
 </section>
 
 <style lang="scss">
 	.Section {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: columns nowrap;
 		gap: 2em;
 		justify-content: space-between;
 

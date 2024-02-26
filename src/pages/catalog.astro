@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SectionArea from "../components/SectionArea.astro";
+import SectionPage from "../components/SectionPage.astro";
 import Offering from "../components/Offering.astro";
 import Button from "../components/shared/Button.astro";
 ---
@@ -9,222 +9,234 @@ import Button from "../components/shared/Button.astro";
 	title="La Ruta de la Quena, el catálogo Web del luthier Domingo Uribe."
 	description="Este es mi Catálogo de instrumentos musicales y mis servicios de educación">
 	<div class="Container">
-		<SectionArea
-			title="Catálogo"
-			description="Estos son mis instrumentos, servicios y sus precios">
-			<Offering
-				imagePath="/src/assets/images/ebano1.jpg"
-				altText="Quena de lujo en madera de ébano africano"
-				title="Quena de lujo en madera de ébano africano"
-				description="Quena profesional fabricada en madera de ébano africano de Gabón"
-				clpPrice={"260.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/5zw1Hmfjx_0?si=mVsYxC9Pj6-m-tq1"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/cocobolo1.jpg"
-				altText="Quena de lujo en madera de cocobolo"
-				title="Quena madera de cocobolo"
-				description="Quena profesional fabricada en madera de cocobolo"
-				clpPrice={"260.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/pcdFF_nqCD8?si=DrXivFiyRhqPRozg"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/ebano-asiatico1.jpg"
-				altText="Quena de lujo en madera de ébano asiático"
-				title="Quena madera de ébano asiático"
-				description="Quena profesional fabricada en madera de ébano asiático"
-				clpPrice={"290.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/ZSg3y58Ote0?si=OL3z2w2c56O4DzlI"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/haya-rosada2.jpg"
-				altText="Quena de lujo en madera de haya rosada"
-				title="Quena madera de haya rosada"
-				description="Quena profesional fabricada en madera de haya rosada"
-				clpPrice={"155.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/2nSWItibXuI?si=6qllTxComjBCKOs-"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/jacaranda1.jpg"
-				altText="Quena de lujo en madera de jacarandá"
-				title="Quena profesional en madera de jacarandá"
-				description="Quena profesional fabricada en madera de jacarandá"
-				clpPrice={"135.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/fdwPbf0Ipls?si=vCwA2feOzcKDhHxB"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/bambu1.jpg"
-				altText="Quena profesional en bambú"
-				title="Quena profesional en bambú"
-				description="Quena profesional fabricada en bambú de primera calidad"
-				clpPrice={"85.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/67PS4Uwyy2A?si=ZMLx2hDdO4YWxOCp"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
+		<SectionPage title="Catálogo">
+			<p>Estos son mis instrumentos, servicios y sus precios</p>
+			<div class="Catalogo-items">
+				<Offering
+					imagePath="/src/assets/images/ebano1.jpg"
+					altText="Quena de lujo en madera de ébano africano"
+					title="Quena de lujo en madera de ébano africano"
+					description="Quena profesional fabricada en madera de ébano africano de Gabón"
+					clpPrice={"260.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/5zw1Hmfjx_0?si=mVsYxC9Pj6-m-tq1"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
+				<Offering
+					imagePath="/src/assets/images/cocobolo1.jpg"
+					altText="Quena de lujo en madera de cocobolo"
+					title="Quena madera de cocobolo"
+					description="Quena profesional fabricada en madera de cocobolo"
+					clpPrice={"260.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/pcdFF_nqCD8?si=DrXivFiyRhqPRozg"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
+				<Offering
+					imagePath="/src/assets/images/ebano-asiatico1.jpg"
+					altText="Quena de lujo en madera de ébano asiático"
+					title="Quena madera de ébano asiático"
+					description="Quena profesional fabricada en madera de ébano asiático"
+					clpPrice={"290.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/ZSg3y58Ote0?si=OL3z2w2c56O4DzlI"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
+				<Offering
+					imagePath="/src/assets/images/haya-rosada2.jpg"
+					altText="Quena de lujo en madera de haya rosada"
+					title="Quena madera de haya rosada"
+					description="Quena profesional fabricada en madera de haya rosada"
+					clpPrice={"155.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/2nSWItibXuI?si=6qllTxComjBCKOs-"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
+				<Offering
+					imagePath="/src/assets/images/jacaranda1.jpg"
+					altText="Quena de lujo en madera de jacarandá"
+					title="Quena profesional en madera de jacarandá"
+					description="Quena profesional fabricada en madera de jacarandá"
+					clpPrice={"135.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/fdwPbf0Ipls?si=vCwA2feOzcKDhHxB"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
+				<Offering
+					imagePath="/src/assets/images/bambu1.jpg"
+					altText="Quena profesional en bambú"
+					title="Quena profesional en bambú"
+					description="Quena profesional fabricada en bambú de primera calidad"
+					clpPrice={"85.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/67PS4Uwyy2A?si=ZMLx2hDdO4YWxOCp"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
 
-			<Offering
-				imagePath="/src/assets/images/pvc1.jpg"
-				altText="Quena de PVC"
-				title="Quena de PVC"
-				description="Quena profesional de PVC"
-				clpPrice={"36.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/xpIryGrbpPY?si=DbbDGZ2bgWpjugsy"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/pvc1.jpg"
-				altText="Quenachos de PVC"
-				title="Quenachos de PVC"
-				description="Quena profesional de PVC"
-				clpPrice={"46.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/yLS3qmKs9WY?si=iAJvO9nduSkaLFMC"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
+				<Offering
+					imagePath="/src/assets/images/pvc1.jpg"
+					altText="Quena de PVC"
+					title="Quena de PVC"
+					description="Quena profesional de PVC"
+					clpPrice={"36.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/xpIryGrbpPY?si=DbbDGZ2bgWpjugsy"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
+				<Offering
+					imagePath="/src/assets/images/pvc1.jpg"
+					altText="Quenachos de PVC"
+					title="Quenachos de PVC"
+					description="Quena profesional de PVC"
+					clpPrice={"46.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/yLS3qmKs9WY?si=iAJvO9nduSkaLFMC"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
 
-			<Offering
-				imagePath="/src/assets/images/shakuhachi5.jpg"
-				altText="Flautas del mundo - Shakuhachi"
-				title="Shakuhachi de bambú"
-				description="Shakuhachi de bambú"
-				clpPrice={"135.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/zNAiJl1y7m8?si=R6KMHHRYv_XkhVpJ"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
+				<Offering
+					imagePath="/src/assets/images/shakuhachi5.jpg"
+					altText="Flautas del mundo - Shakuhachi"
+					title="Shakuhachi de bambú"
+					description="Shakuhachi de bambú"
+					clpPrice={"135.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/zNAiJl1y7m8?si=R6KMHHRYv_XkhVpJ"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
 
-			<Offering
-				imagePath="/src/assets/images/NotAvailable.png"
-				altText="Flautas del mundo - Flauta dizi"
-				title="Flauta dizi"
-				description="Flauta dizi en madera"
-				clpPrice={"135.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/cB-wpACMj4Q?si=IULvGewpuSdyVpDH"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
+				<Offering
+					imagePath="/src/assets/images/NotAvailable.png"
+					altText="Flautas del mundo - Flauta dizi"
+					title="Flauta dizi"
+					description="Flauta dizi en madera"
+					clpPrice={"135.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/cB-wpACMj4Q?si=IULvGewpuSdyVpDH"
+						buttonText="Ver en YouTube"
+						target="_blank"
+					/>
+				</Offering>
 
-			<Offering
-				imagePath="/src/assets/images/siku.jpg"
-				altText="Zampoña tamaño malta"
-				title="Zampoña malta afinación a pedido"
-				description="Zampoña tamaño malta 23 tubos. Cuenta con tres octavas completas"
-				clpPrice={"115.000"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/jSopBeomWkU?si=OyIfmz6nfC5MJpr0"
-					buttonText="Ver en  YouTube"
-					target="_blank"
-				/>
-			</Offering>
-		</SectionArea>
+				<Offering
+					imagePath="/src/assets/images/siku.jpg"
+					altText="Zampoña tamaño malta"
+					title="Zampoña malta afinación a pedido"
+					description="Zampoña tamaño malta 23 tubos. Cuenta con tres octavas completas"
+					clpPrice={"115.000"}>
+					<Button
+						classes="Button Button-sm"
+						link="/contact"
+						buttonText="Contactar"
+						target="_self"
+					/>
+					<Button
+						classes="Button Button-sm"
+						link="https://youtu.be/jSopBeomWkU?si=OyIfmz6nfC5MJpr0"
+						buttonText="Ver en  YouTube"
+						target="_blank"
+					/>
+				</Offering>
+			</div>
+		</SectionPage>
 	</div>
 </Layout>
+
+<style>
+	.Catalogo-items {
+		display: grid;
+		gap: 2em;
+		grid-auto-rows: auto;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
+		grid-auto-flow: dense;
+		height: auto;
+	}
+</style>
