@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import SectionArea from "../components/SectionArea.astro";
+import SectionPage from "../components/SectionPage.astro";
 import Offering from "../components/Offering.astro";
 import Button from "../components/shared/Button.astro";
 ---
@@ -15,10 +15,10 @@ import Button from "../components/shared/Button.astro";
 		body="Hola. Soy Domingo Uribe, luthier especializado en el diseño y fabricación de la quena. Este es mi Catálogo Web de instrumentos musicales, educación y servicios."
 	/>
 
-	<div class="Container">
-		<SectionArea
-			title="Instrumentos destacados"
-			description="Estos son los instrumentos destacados de este mes">
+	<SectionPage
+		title="Instrumentos destacados"
+		description="Estos son los instrumentos destacados de este mes">
+		<div class="Catalogo-items">
 			<Offering
 				imagePath="/src/assets/images/ebano1.jpg"
 				altText="Quena de lujo en madera de ébano africano"
@@ -48,7 +48,7 @@ import Button from "../components/shared/Button.astro";
 					classes="Button Button-sm"
 					link="/contact"
 					buttonText="Contactar"
-					target="'_self"
+					target="_self"
 				/>
 				<Button
 					classes="Button Button-sm"
@@ -76,13 +76,24 @@ import Button from "../components/shared/Button.astro";
 					target="_blank"
 				/>
 			</Offering>
-		</SectionArea>
+		</div>
+	</SectionPage>
 
-		<Button
-			link="/catalog"
-			buttonText="Mira mi catálogo completo"
-			classes="Button Button-md Button-center Button-mt"
-			target="_self"
-		/>
-	</div>
+	<Button
+		link="/catalog"
+		buttonText="Mira mi catálogo completo"
+		classes="Button Button-md Button-center Button-mt"
+		target="_self"
+	/>
 </Layout>
+
+<style lang="scss">
+	.Catalogo-items {
+		display: grid;
+		gap: 2em;
+		grid-auto-rows: auto;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
+		grid-auto-flow: dense;
+		height: auto;
+	}
+</style>

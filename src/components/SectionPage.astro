@@ -1,20 +1,22 @@
 ---
 interface Props {
 	title?: string;
+	description?: string;
 	id?: string;
 }
-const { title, id } = Astro.props;
+const { title, description, id } = Astro.props;
 ---
 
-<section class:list={["Section"]} id={id}>
+<section class:list={["Page"]} id={id}>
 	<div class="Container">
-		<h1 class="Section-title">{title && title}</h1>
+		<h1 class="Page-title">{title && title}</h1>
+		<p>{description && description}</p>
 		<slot />
 	</div>
 </section>
 
 <style lang="scss">
-	.Section {
+	.Page {
 		display: flex;
 		flex-flow: columns nowrap;
 		gap: 2em;

@@ -9,7 +9,7 @@
     --uiBlue: rgb(102, 181, 248);
     --uiWhite: #f0f0f0;
     --uiGray: rgb(224, 224, 224);
-    --uiGrayMedium: rgb(133, 133, 133);
+    --uiGrayMedium: rgb(70, 70, 70);
     --uiGrayDark: rgb(39, 39, 39);
     --uiBlack: rgb(0, 0, 0);
     --uiPink: rgb(255, 100, 124);
@@ -74,7 +74,6 @@ main {
 }
 
 .Page {
-    background-color: var(--uiWhite);
     padding: 0;
 
     &-title {

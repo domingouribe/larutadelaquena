@@ -21,16 +21,16 @@ const { preTitle, title, body } = Astro.props;
 			<p class="Hero-body">{body}</p>
 			<div class="Buttons">
 				<Button
+					classes="Button Button-md Button-primary"
+					link="https://www.youtube.com/@domingouribe"
+					buttonText="Conoce mi trabajo en YouTube"
+					target="_blank"
+				/>
+				<Button
 					classes="Button Button-md"
 					link="/catalog"
 					buttonText="Mira mi Catálogo"
 					target="_self"
-				/>
-				<Button
-					classes="Button Button-md"
-					link="https://www.youtube.com/@domingouribe"
-					buttonText="Sígueme en YouTube"
-					target="_blank"
 				/>
 			</div>
 		</div>
@@ -38,7 +38,6 @@ const { preTitle, title, body } = Astro.props;
 			src={HeroBackgroundImg}
 			alt="Imagen de fondo con dos quenas"
 			width={400}
-			height={300}
 			class="Hero-image"
 		/>
 	</div>
@@ -54,22 +53,22 @@ const { preTitle, title, body } = Astro.props;
 		overflow: hidden;
 		padding: 3em 0 0;
 		gap: 2em;
+		margin-bottom: 2em;
 
 		&-content {
 			display: flex;
 			flex-flow: column;
 			gap: 1em;
 			color: whitesmoke;
-			flex: 2;
+			flex: 3;
 			order: 1;
+
 			.Buttons {
 				display: flex;
 				gap: 2em;
 			}
 		}
 		&-image {
-			display: block;
-			object-fit: cover;
 			flex: 1;
 			border-radius: 0.5em;
 			order: 2;
