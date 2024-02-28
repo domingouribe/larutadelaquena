@@ -22,7 +22,7 @@ La manera simple de soplar la quena ocurre cuando inspiramos, o reservamos aire 
 
 La manera avanzada sucede cuando, después de haber inspirado y habiendo reservado el aire, lo controlamos en todo momento, estando conscientes de cuánto y con qué intensidad estamos insuflando el aire según la naturaleza de la melodía. La manera avanzada de soplar ayuda a controlar con efectividad la afinación y el volumen.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P8HDYALNiNE?si=fHixieCdE7nkUrMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/P8HDYALNiNE?si=fHixieCdE7nkUrMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Contáctame:
 
