@@ -12,4 +12,4 @@ tags: ["quena", "lutheria", "tocar la quena"]
 
 # Clase gratuita de interpretación de la quena
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4PUGyJJtZWg?si=_A9WB8r_Bnkf1IDd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/4PUGyJJtZWg?si=_A9WB8r_Bnkf1IDd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
