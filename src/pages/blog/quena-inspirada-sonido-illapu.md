@@ -4,7 +4,7 @@ title: Quena inspirada en el sonido de Illapu
 author: Domingo Uribe
 description: "Demostración en video de uno de mis modelos de quena inspirada en el sonido clásico de Illapu."
 image: 
-    url: "/src/assets/images/posts/quena-illapu/vista-horizontal.jpg"
+    url: "/vista-horizontal.jpg"
     alt: "Vista horizontal de la quena sobre un fondo celeste"
 pubDate: 2024-02-27
 tags: ["quena", "lutheria", "catálogo"]
