@@ -18,6 +18,11 @@ const posts = await Astro.glob("./blog/*.md");
 	.Post-full {
 		display: flex;
 		flex: 1;
+
+		iframe {
+			aspect-ratio: 19 / 9;
+			width: 100%;
+		}
 	}
 	.Posts {
 		display: grid;
