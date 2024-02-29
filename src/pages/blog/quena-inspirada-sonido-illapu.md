@@ -7,7 +7,7 @@ image:
     url: "/vista-horizontal.jpg"
     alt: "Vista horizontal de la quena sobre un fondo celeste"
 pubDate: 2024-02-27
-tags: ["quena", "lutheria", "catálogo"]
+tags: ["quena", "luther ia", "catálogo"]
 ---
 
 # Quena inspirada en el sonido de Illapu
