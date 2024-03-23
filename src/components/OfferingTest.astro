@@ -1,32 +1,24 @@
 ---
 import { Image } from "astro:assets";
-import DisclaimerIcon from "../components/shared/DisclaimerIcon.astro";
-import DisclaimerText from "./shared/DisclaimerText.astro";
-import Disclaimer from "./shared/Disclaimer.astro";
+import DisclaimerIcon from "./shared/DisclaimerIcon.astro";
+
 interface Props {
 	imagePath: string;
 	altText: string;
 	title: string;
 	description: string;
 	clpPrice: string;
-	usdPrice: string;
+	usdPrice?: string;
 }
-const { imagePath, altText, title, description, clpPrice, usdPrice } =
-	Astro.props;
+const { imagePath, altText, title, description, clpPrice } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/images/*.{jpeg,jpg,png,gif,svg}"
-);
-if (!images[imagePath])
-	throw new Error(
-		`"${imagePath}" does not exist in glob: "/src/assets/images/*.{jpeg,jpg,png,gif,svg}"`
-	);
+
 ---
 
 <div class="Offering">
 	<div class="OfferingImageBox">
 		<Image
-			src={images[imagePath]()}
+			src={imagePath}
 			alt={altText}
 			width={280}
 			height={400}
@@ -36,17 +28,19 @@ if (!images[imagePath])
 	<div class="Offering-text">
 		<h1 class="Offering-title">{title}</h1>
 		<p class="Offering-description">{description}</p>
-		<div class="Offering-prices">
-			<div class="Prices-tag">
-				<span class="CLP">CLP $</span>
-				{clpPrice}
-			</div>
-			<div class="Prices-tag">
-				<span class="CLP">USD $</span>
-				{usdPrice}
+		<div class="Offering-price">
+			<span class="CLP">CLP $</span>
+			{clpPrice}
+			<div class="Disclaimer">
+				<DisclaimerIcon />
+				<small class="Disclaimer-text">
+					Este precio no incluye gastos de envíos locales o internacionales, ni
+					gastos de empaque ni transporte, ni comisiones de PayPal u otros
+					servicios de pagos internacionales. Contáctame y consulta por formas
+					de envío y sus costos.
+				</small>
 			</div>
 		</div>
-		<Disclaimer />
 
 		<div class="Offering-buttons">
 			<slot />
@@ -103,17 +97,13 @@ if (!images[imagePath])
 			margin: 0;
 			font-size: 1rem;
 		}
-		&-prices {
+		&-price {
 			font-size: 2rem;
 			font-weight: bold;
 			display: flex;
-			flex-flow: column nowrap;
+			align-items: center;
 			gap: 0.3em;
 			margin: 0;
-
-			&-tag {
-				display: flex;
-			}
 		}
 		.CLP {
 			font-weight: 400;

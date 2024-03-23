@@ -1,0 +1,34 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+const { title, description } = Astro.props;
+---
+
+<section class:list={["Page"]}>
+	<div class="Container">
+		<h1 class="Page-title">{title && title}</h1>
+		<p>{description && description}</p>
+		<slot />
+	</div>
+</section>
+
+<style lang="scss">
+	.Title {
+		text-align: left;
+		flex-grow: 2;
+		width: 100%;
+		color: var(--ivoryWhite);
+		font-size: 2rem;
+		margin: 2rem 0 0 0;
+		line-height: 1;
+	}
+	.Description {
+		color: var(--ivoryWhite);
+		width: 100%;
+		font-size: 1.1rem;
+		line-height: 1;
+		margin: 0;
+	}
+</style>

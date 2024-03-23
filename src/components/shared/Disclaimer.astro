@@ -1,0 +1,67 @@
+---
+
+---
+
+<div class="Disclaimer">
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		class="Disclaimer-icon"
+		width="24"
+		height="24"
+		viewBox="0 0 24 24"
+		stroke-width="1.5"
+		stroke="#ffcf5c"
+		fill="none"
+		stroke-linecap="round"
+		stroke-linejoin="round">
+		<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+		<path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+		<path d="M12 9h.01"></path>
+		<path d="M11 12h1v4h1"></path>
+	</svg>
+
+	<small class="Disclaimer-text">
+		<p>
+			Este precio en peso chileno (CLP) no incluye gastos de envíos locales. Por
+			defecto yo envío a sucursales de Chilexpress con ese costo de envío por
+			pagar en destino. Contáctame y consulta por otras formas de envío y sus
+			costos.
+		</p>
+		<p>
+			El precio en dólar (USD) sí incluye el costo de envío internacional vía
+			DHL, UPS o FEDEX, según el destino.
+		</p>
+	</small>
+</div>
+
+<style lang="scss">
+	.Disclaimer {
+		position: relative;
+
+		.Disclaimer-text {
+			display: none;
+			position: absolute;
+			top: -16em;
+			left: 0px;
+			background-color: var(--uiYellow);
+			padding: 10px;
+			border-radius: 0.5em;
+			z-index: 2;
+			font-size: 0.8rem;
+			color: #000;
+			width: 100%;
+			font-weight: 600;
+			opacity: 0.97;
+		}
+
+		.Disclaimer-icon {
+			cursor: pointer;
+			color: var(--uiYellow);
+		}
+
+		.Disclaimer-icon:hover + .Disclaimer-text,
+		.Disclaimer-icon:focus + .Disclaimer-text {
+			display: block;
+		}
+	}
+</style>

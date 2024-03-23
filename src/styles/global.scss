@@ -123,34 +123,7 @@ main {
     }
 }
 
-.Disclaimer {
-    position: relative;
 
-    .Disclaimer-text {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: -182px;
-        background-color: var(--uiYellow);
-        padding: 10px;
-        border-radius: .5em;
-        z-index: 2;
-        font-size: .8rem;
-        color: #000;
-        width: 270px;
-        font-weight: 400;
-    }
-
-    .Disclaimer-icon {
-        cursor: pointer;
-        color: var(--uiYellow);
-    }
-
-    .Disclaimer-icon:hover+.Disclaimer-text,
-    .Disclaimer-icon:focus+.Disclaimer-text {
-        display: block;
-    }
-}
 
 .SocialIcon {
     width: 24px;

@@ -1,23 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import SectionPage from "../components/SectionPage.astro";
-import Offering from "../components/Offering.astro";
-import Button from "../components/shared/Button.astro";
+import Layout from "@/layouts/Layout.astro";
+import SectionPage from "@/components/SectionPage.astro";
+import Offering from "@/components/Offering.astro";
+import Button from "@/components/shared/Button.astro";
 ---
 
 <Layout
 	title="La Ruta de la Quena, el catálogo Web del luthier Domingo Uribe."
 	description="Este es mi Catálogo de instrumentos musicales y mis servicios de educación">
 	<div class="Container">
-		<SectionPage title="Catálogo">
-			<p>Estos son mis instrumentos, servicios y sus precios</p>
+		<SectionPage
+			title="Catálogo"
+			description="Estos son mis instrumentos, servicios y sus precios">
 			<div class="Catalogo-items">
 				<Offering
 					imagePath="/src/assets/images/ebano1.jpg"
 					altText="Quena de lujo en madera de ébano africano"
 					title="Quena de lujo en madera de ébano africano"
 					description="Quena profesional fabricada en madera de ébano africano de Gabón"
-					clpPrice={"260.000"}>
+					clpPrice={"260.000"}
+					usdPrice={"345"}>
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -36,7 +38,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Quena de lujo en madera de cocobolo"
 					title="Quena madera de cocobolo"
 					description="Quena profesional fabricada en madera de cocobolo"
-					clpPrice={"260.000"}>
+					clpPrice={"260.000"}
+					usdPrice={"345"}>
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -55,7 +58,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Quena de lujo en madera de ébano asiático"
 					title="Quena madera de ébano asiático"
 					description="Quena profesional fabricada en madera de ébano asiático"
-					clpPrice={"290.000"}>
+					clpPrice={"290.000"}
+					usdPrice={"375"}>
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -74,7 +78,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Quena de lujo en madera de haya rosada"
 					title="Quena madera de haya rosada"
 					description="Quena profesional fabricada en madera de haya rosada"
-					clpPrice={"155.000"}>
+					clpPrice={"155.000"}
+					usdPrice="235">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -93,7 +98,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Quena de lujo en madera de jacarandá"
 					title="Quena profesional en madera de jacarandá"
 					description="Quena profesional fabricada en madera de jacarandá"
-					clpPrice={"135.000"}>
+					clpPrice={"135.000"}
+					usdPrice="215">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -112,7 +118,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Quena profesional en bambú"
 					title="Quena profesional en bambú"
 					description="Quena profesional fabricada en bambú de primera calidad"
-					clpPrice={"85.000"}>
+					clpPrice={"85.000"}
+					usdPrice="160">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -126,13 +133,13 @@ import Button from "../components/shared/Button.astro";
 						target="_blank"
 					/>
 				</Offering>
-
 				<Offering
 					imagePath="/src/assets/images/pvc1.jpg"
 					altText="Quena de PVC"
 					title="Quena de PVC"
 					description="Quena profesional de PVC"
-					clpPrice={"36.000"}>
+					clpPrice={"36.000"}
+					usdPrice="115">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -151,7 +158,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Quenachos de PVC"
 					title="Quenachos de PVC"
 					description="Quena profesional de PVC"
-					clpPrice={"46.000"}>
+					clpPrice={"46.000"}
+					usdPrice="125">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -171,7 +179,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Flautas del mundo - Shakuhachi"
 					title="Shakuhachi de bambú"
 					description="Shakuhachi de bambú"
-					clpPrice={"135.000"}>
+					clpPrice={"135.000"}
+					usdPrice="215">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -191,7 +200,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Flautas del mundo - Flauta dizi"
 					title="Flauta dizi"
 					description="Flauta dizi en madera"
-					clpPrice={"135.000"}>
+					clpPrice={"135.000"}
+					usdPrice="215">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
@@ -211,7 +221,8 @@ import Button from "../components/shared/Button.astro";
 					altText="Zampoña tamaño malta"
 					title="Zampoña malta afinación a pedido"
 					description="Zampoña tamaño malta 23 tubos. Cuenta con tres octavas completas"
-					clpPrice={"115.000"}>
+					clpPrice={"135.000"}
+					usdPrice="220">
 					<Button
 						classes="Button Button-sm"
 						link="/contact"
