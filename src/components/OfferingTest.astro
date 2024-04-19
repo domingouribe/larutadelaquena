@@ -1,119 +1,82 @@
 ---
-import { Image } from "astro:assets";
-import DisclaimerIcon from "./shared/DisclaimerIcon.astro";
-
-interface Props {
-	imagePath: string;
-	altText: string;
-	title: string;
-	description: string;
-	clpPrice: string;
-	usdPrice?: string;
-}
-const { imagePath, altText, title, description, clpPrice } = Astro.props;
-
+import offeringsData from "@/data/offerings";
 
 ---
 
-<div class="Offering">
-	<div class="OfferingImageBox">
-		<Image
-			src={imagePath}
-			alt={altText}
-			width={280}
-			height={400}
-			class="Offering-image"
-		/>
-	</div>
-	<div class="Offering-text">
-		<h1 class="Offering-title">{title}</h1>
-		<p class="Offering-description">{description}</p>
-		<div class="Offering-price">
-			<span class="CLP">CLP $</span>
-			{clpPrice}
-			<div class="Disclaimer">
-				<DisclaimerIcon />
-				<small class="Disclaimer-text">
-					Este precio no incluye gastos de envíos locales o internacionales, ni
-					gastos de empaque ni transporte, ni comisiones de PayPal u otros
-					servicios de pagos internacionales. Contáctame y consulta por formas
-					de envío y sus costos.
-				</small>
-			</div>
-		</div>
-
-		<div class="Offering-buttons">
-			<slot />
-		</div>
-	</div>
-</div>
+{
+  offeringsData.slice(0, numToShow || offeringsData.length).map((offering) => (
+    <div class="Offering">
+      <h3>{offeringsData.title}</h3>
+    </div>
+  ))
+}
 
 <style lang="scss">
-	.Offering {
-		display: flex;
-		background-color: var(--uiGrayDark);
-		height: fit-content;
-		color: whitesmoke;
-		gap: 0.5em;
-		border-radius: 1em;
-		overflow: hidden;
-		flex-grow: 1;
-		flex-flow: column nowrap;
-		justify-content: center;
-		text-align: left;
-		line-height: 1.2;
+  .Offering {
+    display: flex;
+    background-color: var(--uiGrayDark);
+    height: fit-content;
+    color: whitesmoke;
+    gap: 0.5em;
+    border-radius: 1em;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: left;
+    line-height: 1.2;
 
-		.OfferingImageBox {
-			overflow: hidden;
-		}
+    .OfferingImageBox {
+      overflow: hidden;
+    }
 
-		&-image {
-			object-fit: cover;
-			display: block;
-			width: 100%;
-			height: 320px;
-			transition: all ease 0.3s;
+    &-image {
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 320px;
+      transition: all ease 0.3s;
 
-			&:hover {
-				scale: 1.1;
-				overflow: hidden;
-			}
-		}
-		&-text {
-			padding: 1em;
-			display: flex;
-			flex-flow: column nowrap;
-			gap: 1em;
-			min-height: 370px;
-		}
-		&-title {
-			margin: 0;
-			font-size: 1.1rem;
-			font-weight: normal;
-			font-weight: bolder;
-			text-transform: uppercase;
-		}
-		&-description {
-			margin: 0;
-			font-size: 1rem;
-		}
-		&-price {
-			font-size: 2rem;
-			font-weight: bold;
-			display: flex;
-			align-items: center;
-			gap: 0.3em;
-			margin: 0;
-		}
-		.CLP {
-			font-weight: 400;
-			font-size: 1rem;
-		}
+      &:hover {
+        scale: 1.1;
+        overflow: hidden;
+      }
+    }
+    &-text {
+      padding: 1em;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1em;
+      min-height: 370px;
+    }
+    &-title {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: normal;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+    &-description {
+      margin: 0;
+      font-size: 1rem;
+    }
+    &-price {
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      margin: 0;
+    }
+    .CLP {
+      font-weight: 400;
+      font-size: 1rem;
+    }
 
-		&-buttons {
-			display: flex;
-			gap: 1em;
-			justify-content: flex-start;
-		}
-	}
+    &-buttons {
+      display: flex;
+      gap: 1em;
+      justify-content: flex-start;
+    }
+  }
 </style>
