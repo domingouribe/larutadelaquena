@@ -1,8 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-
-
-const offeringsData = [
+const instrumentsData = [
   {
     id: uuidv4(),
     title: "Quena de lujo en madera de ébano africano",
@@ -43,4 +41,4 @@ const offeringsData = [
   // Resto de los elementos Offering...
 ];
 
-export default offeringsData;
+export default instrumentsData;
