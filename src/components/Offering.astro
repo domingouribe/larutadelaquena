@@ -1,32 +1,19 @@
 ---
+import type { offeringItem } from "@/types/types";
+interface Props extends offeringItem {}
 import { Image } from "astro:assets";
-
+import DisclaimerIcon from "./shared/DisclaimerIcon.astro";
 import Disclaimer from "./shared/Disclaimer.astro";
-interface Props {
-	imagePath: string;
-	altText: string;
-	title: string;
-	description: string;
-	clpPrice: string;
-	usdPrice: string;
-}
-const { imagePath, altText, title, description, clpPrice, usdPrice } =
-	Astro.props;
+import Button from "./shared/Button.astro";
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/images/*.{jpeg,jpg,png,gif,svg}"
-);
-if (!images[imagePath])
-	throw new Error(
-		`"${imagePath}" does not exist in glob: "/src/assets/images/*.{jpeg,jpg,png,gif,svg}"`
-	);
+const { image, alt, title, description, price, id, youtubeLink } = Astro.props;
 ---
 
-<div class="Offering">
+<div class="Offering" id={id}>
 	<div class="OfferingImageBox">
 		<Image
-			src={images[imagePath]()}
-			alt={altText}
+			src={image}
+			alt={alt}
 			width={280}
 			height={400}
 			class="Offering-image"
@@ -35,18 +22,29 @@ if (!images[imagePath])
 	<div class="Offering-text">
 		<h1 class="Offering-title">{title}</h1>
 		<p class="Offering-description">{description}</p>
-		<div class="Offering-prices">
-			<div class="Prices-tag">
-				<span class="CLP">CLP $</span>
-				{clpPrice}
-			</div>
-			<div class="Prices-tag">
-				<span class="CLP">USD $</span>
-				{usdPrice}
-			</div>
+		<div class="Offering-price">
+			<span class="CLP">CLP $</span>
+			{price.clp}
 		</div>
-		<Disclaimer />
+		<div class="Offering-price">
+			<span class="CLP">CLP $</span>
+			{price.usd}
+		</div>
+		<div class="Disclaimer">
+			<Disclaimer />
+		</div>
+
 		<div class="Offering-buttons">
+			<Button
+				link={youtubeLink}
+				buttonText="Ver en YouTube"
+				classes="Button Button-primary Button-sm"
+			/>
+			<Button
+				link={"/contact"}
+				buttonText="Contáctame"
+				classes="Button Button-sm"
+			/>
 			<slot />
 		</div>
 	</div>
@@ -101,17 +99,13 @@ if (!images[imagePath])
 			margin: 0;
 			font-size: 1rem;
 		}
-		&-prices {
+		&-price {
 			font-size: 2rem;
 			font-weight: bold;
 			display: flex;
-			flex-flow: column nowrap;
+			align-items: center;
 			gap: 0.3em;
 			margin: 0;
-
-			&-tag {
-				display: flex;
-			}
 		}
 		.CLP {
 			font-weight: 400;

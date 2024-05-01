@@ -1,9 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/Hero.astro";
-import SectionPage from "@/components/SectionPage.astro";
-import Offering from "@/components/Offering.astro";
 import Button from "@/components/shared/Button.astro";
+import OfferingTest from "@/components/Offering.astro";
+import OfferingContainer from "@/components/shared/OfferingContainer.astro";
+import offerings from "../data/dataQuenas";
+import type { Code, Debug } from "astro:components";
 ---
 
 <Layout
@@ -15,72 +17,11 @@ import Button from "@/components/shared/Button.astro";
 		body="Hola. Soy Domingo Uribe, luthier especializado en el diseño y fabricación de la quena. Este es mi Catálogo Web de instrumentos musicales, educación y servicios."
 	/>
 
-	<SectionPage
+	<OfferingContainer
 		title="Instrumentos destacados"
 		description="Estos son los instrumentos destacados de este mes">
-		<div class="Catalogo-items">
-			<Offering
-				imagePath="/src/assets/images/ebano1.jpg"
-				altText="Quena de lujo en madera de ébano africano"
-				title="Quena de lujo en madera de ébano africano"
-				description="Quena profesional fabricada en madera de ébano africano de Gabón"
-				clpPrice={"260.000"}
-				usdPrice={"345"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/5zw1Hmfjx_0?si=mVsYxC9Pj6-m-tq1"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/cocobolo1.jpg"
-				altText="Quena de lujo en madera de cocobolo"
-				title="Quena madera de cocobolo"
-				description="Quena profesional fabricada en madera de cocobolo"
-				clpPrice={"260.000"}
-				usdPrice={"345"}>
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/pcdFF_nqCD8?si=DrXivFiyRhqPRozg"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-			<Offering
-				imagePath="/src/assets/images/ebano-asiatico1.jpg"
-				altText="Quena de lujo en madera de ébano asiático"
-				title="Quena madera de ébano asiático"
-				description="Quena profesional fabricada en madera de ébano asiático"
-				clpPrice={"290.000"}
-				usdPrice="375">
-				<Button
-					classes="Button Button-sm"
-					link="/contact"
-					buttonText="Contactar"
-					target="_self"
-				/>
-				<Button
-					classes="Button Button-sm"
-					link="https://youtu.be/ZSg3y58Ote0?si=OL3z2w2c56O4DzlI"
-					buttonText="Ver en YouTube"
-					target="_blank"
-				/>
-			</Offering>
-		</div>
-	</SectionPage>
+		{offerings.slice(0, 3).map((item) => <OfferingTest {...item} />)}
+	</OfferingContainer>
 
 	<Button
 		link="/catalog"
