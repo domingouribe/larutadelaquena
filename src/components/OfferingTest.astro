@@ -1,25 +1,19 @@
 ---
+import type { offeringItem } from "@/types/types";
+interface Props extends offeringItem {}
 import { Image } from "astro:assets";
 import DisclaimerIcon from "./shared/DisclaimerIcon.astro";
+import Disclaimer from "./shared/Disclaimer.astro";
+import Button from "./shared/Button.astro";
 
-interface Props {
-	imagePath: string;
-	altText: string;
-	title: string;
-	description: string;
-	clpPrice: string;
-	usdPrice?: string;
-}
-const { imagePath, altText, title, description, clpPrice } = Astro.props;
-
-
+const { image, alt, title, description, price, id, youtubeLink } = Astro.props;
 ---
 
-<div class="Offering">
+<div class="Offering" id={id}>
 	<div class="OfferingImageBox">
 		<Image
-			src={imagePath}
-			alt={altText}
+			src={image}
+			alt={alt}
 			width={280}
 			height={400}
 			class="Offering-image"
@@ -30,19 +24,27 @@ const { imagePath, altText, title, description, clpPrice } = Astro.props;
 		<p class="Offering-description">{description}</p>
 		<div class="Offering-price">
 			<span class="CLP">CLP $</span>
-			{clpPrice}
-			<div class="Disclaimer">
-				<DisclaimerIcon />
-				<small class="Disclaimer-text">
-					Este precio no incluye gastos de envíos locales o internacionales, ni
-					gastos de empaque ni transporte, ni comisiones de PayPal u otros
-					servicios de pagos internacionales. Contáctame y consulta por formas
-					de envío y sus costos.
-				</small>
-			</div>
+			{price.clp}
+		</div>
+		<div class="Offering-price">
+			<span class="CLP">CLP $</span>
+			{price.usd}
+		</div>
+		<div class="Disclaimer">
+			<Disclaimer />
 		</div>
 
 		<div class="Offering-buttons">
+			<Button
+				link={youtubeLink}
+				buttonText="Ver en YouTube"
+				classes="Button Button-primary Button-sm"
+			/>
+			<Button
+				link={"/contact"}
+				buttonText="Contáctame"
+				classes="Button Button-sm"
+			/>
 			<slot />
 		</div>
 	</div>
