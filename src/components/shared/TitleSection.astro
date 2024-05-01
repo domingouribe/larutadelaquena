@@ -1,0 +1,38 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+const { title, description} = Astro.props;
+---
+
+<div class="Heading-section">
+    <h1 class="Title">{title}</h1>
+    <p class="Description">{description}</p>
+</div>
+
+<style lang="scss">
+	.Heading-section {
+		display: flex;
+		gap: 1em;
+		justify-content: space-between;
+        flex-flow: column nowrap;
+
+		.Title {
+			text-align: left;
+			flex-grow: 2;
+			width: 100%;
+			color: var(--ivoryWhite);
+			font-size: 2rem;
+			margin: 2rem 0 0 0;
+			line-height: 1;
+		}
+		.Description {
+			color: var(--ivoryWhite);
+			width: 100%;
+			font-size: 1.1rem;
+			line-height: 1;
+			margin: 0;
+		}
+	}
+</style>
