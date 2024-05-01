@@ -1,15 +1,21 @@
 ---
 import OfferingContainer from "@/components/shared/OfferingContainer.astro";
 import Layout from "@/layouts/Layout.astro";
-import OfferingTest from "@/components/Offering.astro";
+import Offering from "@/components/Offering.astro";
 import offerings from "../data/dataQuenas";
+import SectionPage from "@/components/SectionPage.astro";
+import TitlePage from "@/components/TitlePage.astro";
 ---
 
 <Layout
 	title="La Ruta de la Quena, el catálogo Web del luthier Domingo Uribe."
 	description="Este es mi Catálogo de instrumentos musicales y mis servicios de educación">
+	<TitlePage
+		title="Catálogo"
+		description="Este es mi Catálogo de instrumentos musicales y mis servicios de educación"
+	/>
 	<OfferingContainer>
-		{offerings.map((item) => <OfferingTest {...item} />)}
+		{offerings.map((item) => <Offering {...item} />)}
 	</OfferingContainer>
 </Layout>
 

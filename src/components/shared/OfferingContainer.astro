@@ -7,16 +7,18 @@ interface Props {
 const { title, description, id } = Astro.props;
 ---
 
-<div class="OfferingsContainer">
+<div class="OfferingsSection">
+	<div class="Container">
 	<h2 class="Section-title">{title && title}</h2>
 	<p class="Section-description">{description && description}</p>
-	<div class="Container">
-		<slot />
+		<div class="OfferingsItems">
+			<slot />
+		</div>
 	</div>
 </div>
 
 <style lang="scss">
-	.OfferingsContainer {
+	.OfferingsItems {
 		width: 100%;
 		display: grid;
 		gap: 2em;

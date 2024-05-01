@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'La Ruta de La Quena';
-export const SITE_DESCRIPTION = '¡Bienvenidos a mi Catálogo online y Blog!';
+export const SITE_DESCRIPTION = 'Catálogo online y Blog del luthier Domingo Uribe, especialista en fabricación de quenas de alta gama';
