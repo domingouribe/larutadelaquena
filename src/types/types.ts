@@ -14,4 +14,5 @@ export interface offeringItem {
     },
     youtubeLink: string;
     id: string;
+    detailLink: string;
 }

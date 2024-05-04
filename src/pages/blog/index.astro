@@ -2,7 +2,7 @@
 import LayoutBlog from "@/layouts/LayoutBlog.astro";
 import PostPreviewCard from "@/components/shared/PostPreviewCard.astro";
 
-const posts = await Astro.glob("./blog/*.md");
+const posts = await Astro.glob("../blog/*.md");
 ---
 
 <LayoutBlog
