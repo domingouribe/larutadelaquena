@@ -19,7 +19,7 @@ const dataQuenas: offeringItem[] = [
         id: uuidv4(),
         title: "Quena de lujo en madera de cocobolo",
         image: "/src/assets/cocobolo1.jpg",
-        alt: "Quena de lujo en madera de ebano africano - Foto frontal muestra todo el instrumento",
+        alt: "Quena de lujo en madera de cocobolo - Foto frontal muestra todo el instrumento",
         description: "Quena profesional fabricada en madera de cocobolo",
         price: {
             clp: 455000,
@@ -32,7 +32,7 @@ const dataQuenas: offeringItem[] = [
         id: uuidv4(),
         title: "Quena de lujo en madera de ébano asiático",
         image: "/src/assets/ebano-asiatico1.jpg",
-        alt: "Quena de lujo en madera de ebano africano - Foto frontal muestra todo el instrumento",
+        alt: "Quena de lujo en madera de ebano asiático - Foto frontal muestra todo el instrumento",
         description: "Quena profesional fabricada en madera de ébano asiático",
         price: {
             clp: 455000,
