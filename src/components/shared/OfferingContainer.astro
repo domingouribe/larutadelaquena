@@ -8,8 +8,8 @@ const { title, description } = Astro.props;
 
 <div class="OfferingsSection">
 	<div class="Container">
-	<h2 class="Section-title">{title && title}</h2>
-	<p class="Section-description">{description && description}</p>
+		<h2 class="Section-title">{title && title}</h2>
+		<p class="Section-description">{description && description}</p>
 		<div class="OfferingsItems">
 			<slot />
 		</div>
@@ -20,9 +20,9 @@ const { title, description } = Astro.props;
 	.OfferingsItems {
 		width: 100%;
 		display: grid;
-		gap: 2em;
+		gap: 1em;
 		grid-auto-rows: auto;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, 15em), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 14em), 1fr));
 		grid-auto-flow: dense;
 		height: auto;
 	}
