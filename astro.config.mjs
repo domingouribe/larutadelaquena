@@ -11,8 +11,5 @@ export default defineConfig({
         // opciones van aquí
       },
     }),
-  ],
-  devToolbar: {
-    enabled: true
-  }
+  ]
 });

@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import HeroBackgroundImg from "../assets/images/hero-image-1.jpg";
 import Button from "./shared/Button.astro";
-import { slide } from "astro:transitions";
+import { fade, slide } from "astro:transitions";
 
 interface Props {
 	title: string;
@@ -37,7 +37,8 @@ const { preTitle, title, body } = Astro.props;
 		<Image
 			src={HeroBackgroundImg}
 			alt="Imagen de fondo con dos quenas"
-			width={800}
+			width={889}
+			height={500}
 			class="Hero-image"
 		/>
 	</div>
