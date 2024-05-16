@@ -5,7 +5,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quena de lujo en madera de ébano africano",
-        image: "/src/assets/ebano1.jpg",
+        image: "/src/assets/offerings/ebano-africano.jpg",
         alt: "Quena de lujo en madera de ebano africano - Foto frontal muestra todo el instrumento",
         description: "Quena profesional fabricada en madera de ébano africano de Gabón",
         priceCLP: 320000,
@@ -15,7 +15,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quena de lujo en madera de cocobolo",
-        image: "/src/assets/cocobolo1.jpg",
+        image: "/src/assets/offerings/cocobolo.jpg",
         alt: "Quena de lujo en madera de cocobolo - Foto frontal muestra todo el instrumento",
         description: "Quena profesional fabricada en madera de cocobolo",
         priceCLP: 320000,
@@ -25,7 +25,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quena de lujo en madera de ébano asiático",
-        image: "/src/assets/ebano-asiatico1.jpg",
+        image: "/src/assets/offerings/ebano-asiatico.jpg",
         alt: "Quena de lujo en madera de ebano asiático - Foto frontal muestra todo el instrumento",
         description: "Quena profesional fabricada en madera de ébano asiático",
         priceCLP: 345000,
@@ -35,7 +35,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quena de lujo en madera de haya rosada",
-        image: "/src/assets/haya-rosada2.jpg",
+        image: "/src/assets/offerings/haya-rosada.jpg",
         alt: "Foto quena de haya rosada - Se muestra todo el instrumento destacando su color y las vetas de la madera",
         description: "Quena profesional fabricada en madera de haya rosada",
         priceCLP: 175000,
@@ -45,7 +45,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quena profesional en madera de jacarandá",
-        image: "/src/assets/jacaranda1.jpg",
+        image: "/src/assets/offerings/jacaranda.jpg",
         alt: "Foto quena de jacarandá - Se muestra todo el instrumento destacando su color marón oscuro y las vetas de la madera",
         description: "Quena profesional fabricada en madera de jacarandá",
         priceCLP: 155000,
@@ -55,7 +55,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quena profesional en bambú",
-        image: "/src/assets/bambu1.jpg",
+        image: "/src/assets/offerings/bambu.jpg",
         alt: "Foto quena de bambú - Se muestra todo el instrumento destacando su color marón amarillo claro y la perfección de sus orificios y simetría",
         description: "Quena profesional fabricada en bambú de primera calidad",
         priceCLP: 85000,
@@ -65,7 +65,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quena PVC",
-        image: "/src/assets/pvc.jpg",
+        image: "/src/assets/offerings/pvc.jpg",
         alt: "Foto quena de PVC - Se muestra todo el instrumento",
         description: "Quena de estudio en material de PVC",
         priceCLP: 55000,

@@ -10,12 +10,12 @@ const { image, alt, title, description, priceCLP, id, youtubeLink } =
 	Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/*.{jpeg,jpg,png,gif}"
+	"/src/assets/offerings/*.{jpeg,jpg,png,gif}"
 );
 
 if (!images[image])
 	throw new Error(
-		`"${image}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+		`"${image}" does not exist in glob: "src/assets/offerings/*.{jpeg,jpg,png,gif}"`
 	);
 
 // Inicio bloque cálculo conversión de precio a dolar con envío internacional incluido
@@ -45,7 +45,7 @@ const formattedTotalUSD = totalUSD.toFixed(0); // No especificar decimales para 
 			src={images[image]()}
 			alt={alt}
 			width={400}
-			height={534}
+			height={500}
 			class="Offering-image"
 		/>
 	</div>
@@ -95,16 +95,19 @@ const formattedTotalUSD = totalUSD.toFixed(0); // No especificar decimales para 
 		justify-content: center;
 		text-align: left;
 		line-height: 1.2;
+		min-width: 18em;
 
 		.OfferingImageBox {
 			overflow: hidden;
 		}
 
 		&-image {
-			aspect-ratio: 1/1;
+			aspect-ratio: 4/5;
 			object-fit: cover;
 			transition: all ease 0.3s;
 			display: block;
+			width: 400px;
+			height: 500px;
 
 			&:hover {
 				scale: 1.1;
