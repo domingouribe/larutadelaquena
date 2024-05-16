@@ -9,7 +9,6 @@ export interface offeringItem {
     title: string;
     description: string;
     price: {
-        usd: number;
         clp: number;
     },
     youtubeLink: string;
