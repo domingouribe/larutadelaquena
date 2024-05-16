@@ -6,8 +6,6 @@ import { Image } from "astro:assets";
 import Disclaimer from "./shared/Disclaimer.astro";
 import Button from "./shared/Button.astro";
 
-//My images
-
 const { image, alt, title, description, price, id, youtubeLink } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -23,7 +21,7 @@ if (!images[image])
 <div class="Offering" id={id}>
 	<div class="OfferingImageBox">
 		<Image
-			src={image}
+			src={images[image]()}
 			alt={alt}
 			width={400}
 			height={400}
