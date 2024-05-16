@@ -1,3 +1,27 @@
 ---
-import Image
+import type { offeringItem } from "@/types/types";
+import { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+interface Props {
+	imagePath: string;
+	altText: string;
+	name: string;
+	price: number;
+}
+
+const { imagePath, altText, name, price } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/*.{jpg, jpeg, png, gif}"
+);
+if (!images[imagePath])
+	throw new Error(
+		`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+	);
 ---
+
+<div class="ImageCard">
+	<h2>{name}</h2>
+	<p>Price: {price}</p>
+	<Image src={images[imagePath]()} alt={altText} />
+</div>
