@@ -8,9 +8,7 @@ export interface offeringItem {
     alt: string;
     title: string;
     description: string;
-    price: {
-        clp: number;
-    },
+    priceCLP: number;
     youtubeLink: string;
     id: string;
     detailLink: string;

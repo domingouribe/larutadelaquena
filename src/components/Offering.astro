@@ -6,7 +6,8 @@ import { Image } from "astro:assets";
 import Disclaimer from "./shared/Disclaimer.astro";
 import Button from "./shared/Button.astro";
 
-const { image, alt, title, description, price, id, youtubeLink } = Astro.props;
+const { image, alt, title, description, priceCLP, id, youtubeLink } =
+	Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
 	"/src/assets/*.{jpeg,jpg,png,gif}"
@@ -16,6 +17,26 @@ if (!images[image])
 	throw new Error(
 		`"${image}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
 	);
+
+// Inicio bloque cálculo conversión de precio a dolar con envío internacional incluido
+
+const interShippingCLP = 30000; // Costo de envío internacional en pesos chilenos
+const changeDolarCLP = 900; // Tipo de cambio en pesos chilenos
+
+// Convertir el precio y el costo de envío a dólares
+const priceUSD = priceCLP / changeDolarCLP; // Precio en dólares
+const interShippingUSD = interShippingCLP / changeDolarCLP; // Costo de envío en dólares
+
+// Calcular el precio total en dólares sumando el precio y el costo de envío
+let totalUSD = priceUSD + interShippingUSD;
+
+// Redondear el precio total en dólares hacia arriba si la parte decimal es mayor o igual a 0.5
+totalUSD = Math.ceil(totalUSD);
+
+// Formatear el precio total en dólares
+const formattedTotalUSD = totalUSD.toFixed(0); // No especificar decimales para mostrar el número entero redondeado hacia arriba
+
+// fin bloque cálculo conversión de precio a dolar con envío internacional incluido
 ---
 
 <div class="Offering" id={id}>
@@ -33,7 +54,12 @@ if (!images[image])
 		<p class="Offering-description">{description}</p>
 		<div class="Offering-price">
 			<span class="CLP">CLP $</span>
-			{price.clp}
+			{priceCLP}
+		</div>
+
+		<div class="Offering-price">
+			<span class="CLP">USD $</span>
+			{formattedTotalUSD}
 		</div>
 
 		<div class="Disclaimer">
