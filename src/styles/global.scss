@@ -11,11 +11,11 @@
     --uiGray: rgb(224, 224, 224);
     --uiGrayMedium: rgb(70, 70, 70);
     --uiGrayDark: rgb(39, 39, 39);
-    --uiBlack: rgb(0, 0, 0);
+    --uiBlack: rgb(26, 12, 51);
     --uiPink: rgb(255, 100, 124);
-    --uiPurple: rgb(192, 163, 255);
     --uiBrown: rgb(128, 70, 23);
-    --uiPurple: rgba(13, 0, 15, 0.8);
+    --uiPurple: rgba(24, 1, 27, 0.068);
+    --uiPurpleLight: rgba(233, 199, 238, 0.089);
 
 }
 
@@ -76,6 +76,10 @@ main {
     grid-auto-flow: inherit;
 }
 
+.Section-title {
+    margin: 0;
+}
+
 .Page {
     padding: 0;
 
@@ -114,6 +118,8 @@ main {
 
     /* Mobile Styles */
     @media only screen and (max-width: 480px) {
+
+
         &-title {
             font-size: 1.5rem;
             /* Ajusta el tamaño del título para dispositivos móviles */

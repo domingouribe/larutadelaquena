@@ -22,10 +22,12 @@ import offerings from "../data/dataQuenas";
 		{offerings.slice(0, 3).map((item) => <Offering {...item} />)}
 	</OfferingContainer>
 
-	<Button
-		link="/catalog"
-		buttonText="Mira mi catálogo completo"
-		classes="Button Button-md Button-center Button-mt"
-		target="_self"
-	/>
+	<div class="Container">
+		<Button
+			link="/catalog"
+			buttonText="Mira mi catálogo completo"
+			classes="Button Button-lg Button-center Button-mt"
+			target="_self"
+		/>
+	</div>
 </Layout>
