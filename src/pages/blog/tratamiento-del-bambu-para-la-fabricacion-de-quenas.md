@@ -4,7 +4,7 @@ title: Tratamiento del bambú para la fabricación de quenas – Método Domingo
 author: Domingo Uribe
 description: "Desvelo mi método de preparación del bambú desde el momento en que se saca del cañaveral hasta la fabricación"
 image:
-  url: "src/assets/images/logoQuenaBambu.jpg"
+  url: "/src/assets/images/logoQuenaBambu.jpg"
   alt: "Una quena de bambú con mi firma grabada en láser"
 pubDate: 2024-02-26
 tags: ["quena", "lutheria"]
