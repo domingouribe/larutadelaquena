@@ -3,9 +3,9 @@ layout: ../../layouts/LayoutBlog.astro
 title: Clase gratuita interpretación de la quena
 author: Domingo Uribe
 description: "Comparto consejos que en su momento fueron privados, y ahora son público para beneficio de todos"
-image: 
-    url: "/src/assets/images/logoQuenaBambu.jpg"
-    alt: "Una quena de bambú con mi firma grabada en láser"
+image:
+  url: "/logoQuenaBambu.jpg"
+  alt: "Una quena de bambú con mi firma grabada en láser"
 pubDate: 2024-02-27
 tags: ["quena", "lutheria", "tocar la quena"]
 ---

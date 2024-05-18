@@ -3,9 +3,9 @@ layout: ../../layouts/LayoutBlog.astro
 title: Tratamiento del bambú para la fabricación de quenas – Método Domingo Uribe
 author: Domingo Uribe
 description: "Desvelo mi método de preparación del bambú desde el momento en que se saca del cañaveral hasta la fabricación"
-image: 
-    url: "/src/assets/images/logoQuenaBambu.jpg"
-    alt: "Una quena de bambú con mi firma grabada en láser"
+image:
+  url: "src/assets/images/logoQuenaBambu.jpg"
+  alt: "Una quena de bambú con mi firma grabada en láser"
 pubDate: 2024-02-26
 tags: ["quena", "lutheria"]
 ---
@@ -60,7 +60,7 @@ Punto 10: ¿Qué objetivo tiene la impregnación con aceite de linaza? El aceite
 
 Este proceso yo lo realizo después de perforar los orificios para los dedos/notas y de hacer la escotadura. La razón es muy sencilla, lógica y útil: hay más áreas de acceso profundo del aceite. Los bordes de los orificios absorben más aceite que la corteza por sus poros. Este proceso de impregnación profunda se puede hacer de dos maneras, y se puede decidir por uno u otro según el tiempo disponible que se tenga.
 
-Impregnado profundo rápido: Se calienta nuevamente el tubo ya hecho quena en el horno a 100 grados y luego se sumerge en un recipiente con aceite de linaza. La  temperatura de la pieza de bambú adelgazará el aceite y expandirá las fibras del bambú permitiéndole penetrar más profundo en toda su masa y de manera casi instantánea. No es necesario dejarlo más de 5 minutos sumergido. Este proceso además cumple otro objeto, que es templar y endurecer el bambú volviéndolo muy rígido.
+Impregnado profundo rápido: Se calienta nuevamente el tubo ya hecho quena en el horno a 100 grados y luego se sumerge en un recipiente con aceite de linaza. La temperatura de la pieza de bambú adelgazará el aceite y expandirá las fibras del bambú permitiéndole penetrar más profundo en toda su masa y de manera casi instantánea. No es necesario dejarlo más de 5 minutos sumergido. Este proceso además cumple otro objeto, que es templar y endurecer el bambú volviéndolo muy rígido.
 
 Impregnado profundo lento: Se sumerge el tubo sin calentar en el recipiente con aceite de linaza frío y se deja por al menos 12 horas.
 
@@ -77,4 +77,3 @@ Bambú de Ovalle, recién cosechado
 Atentamente, Domingo Uribe
 
 Luthier especializado en quenas
-

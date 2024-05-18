@@ -3,9 +3,9 @@ layout: ../../layouts/LayoutBlog.astro
 title: Dos maneras de soplar la quena ¿Cuál esas actualmente?
 author: Domingo Uribe
 description: "Muestro dos maneras que existen de soplar la quena, y que diferencia grandemente a un quenista experimentado de los principiantes"
-image: 
-    url: "/src/assets/images/logoQuenaBambu.jpg"
-    alt: "Una quena de bambí con mi firma grabada en láser"
+image:
+  url: "/logoQuenaBambu.jpg"
+  alt: "Una quena de bambí con mi firma grabada en láser"
 pubDate: 2024-02-26
 tags: ["quena", "lutheria"]
 ---
@@ -28,4 +28,3 @@ Contáctame:
 
 Puedes aprender más sobre la quena en mi canal de YouTube: https://www.youtube.com/@domingouribe y en mi página de Facebook:
 https://www.facebook.com/DomingoUribeCordova/.
-

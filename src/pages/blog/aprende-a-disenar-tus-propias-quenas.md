@@ -3,9 +3,9 @@ layout: ../../layouts/LayoutBlog.astro
 title: Aprende a diseñar tus propias quenas
 author: Domingo Uribe
 description: "He creado este videotutorial sobre Flutomat hace algunos años. Se trata de una calculadora Web para diseño de flautas"
-image: 
-    url: "/src/assets/images/logoQuenaBambu.jpg"
-    alt: "Una quena de bambú con mi firma grabada en láser"
+image:
+  url: "/logoQuenaBambu.jpg"
+  alt: "Una quena de bambú con mi firma grabada en láser"
 pubDate: 2024-02-27
 tags: ["quena", "lutheria", "tocar la quena"]
 ---

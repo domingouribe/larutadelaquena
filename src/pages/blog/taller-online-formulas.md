@@ -3,16 +3,16 @@ layout: ../../layouts/LayoutBlog.astro
 title: Taller Online ¿Fórmulas para la Fabricar Quena?
 author: Domingo Uribe
 description: "Inscríbete en mi 'Taller Online Fórmulas para la Fabricación de la Quena' y aprende cómo yo veo las fórmulas, cómo las entiendo, y cómo las utilizo en mi trabajo diario"
-image: 
-    url: "/src/assets/images/logoQuenaBambu.jpg"
-    alt: "Una quena de bambí con mi firma grabada en láser"
+image:
+  url: "/logoQuenaBambu.jpg"
+  alt: "Una quena de bambí con mi firma grabada en láser"
 pubDate: 2024-01-26
-tags: ["quena", "lutheria", "cursos", "taller" ]
+tags: ["quena", "lutheria", "cursos", "taller"]
 ---
 
 # Taller online: ¿Fórmulas para fabricar quenas? ¿Son necesarias?
 
-![Foto de una de mis quenas personales](/src/assets/images/posts/MasSobreLaQuena.jpg "Más sobre la quena") 
+![Foto de una de mis quenas personales](/src/assets/images/posts/MasSobreLaQuena.jpg "Más sobre la quena")
 
 Inscríbete en mi Taller online: “Fórmulas para fabricar quenas: ¿Son necesarias?” y aprende cómo veo yo las fórmulas, cómo las entiendo, y cómo las utilizo en mi trabajo diario. Estoy seguro de que el contenido de este Taller te ayudará mucho en tu crecimiento como luthier.
 
@@ -34,11 +34,11 @@ No. El video es mi propiedad intelectual protegida, y yo te doy acceso privado a
 
 **Detalles del Taller:**
 
-*   **Fecha:** Horarios libres a tu ritmo
-*   **Duración:** 1 hora cronológica
-*   **Plataforma:** Mi Canal de YouTube
+- **Fecha:** Horarios libres a tu ritmo
+- **Duración:** 1 hora cronológica
+- **Plataforma:** Mi Canal de YouTube
 
 **Precio del Acceso al Taller:**
 
-*   **CLP:** $15,000 desde dentro de Chile
-*   **USD:** $20 desde fuera de Chile
+- **CLP:** $15,000 desde dentro de Chile
+- **USD:** $20 desde fuera de Chile

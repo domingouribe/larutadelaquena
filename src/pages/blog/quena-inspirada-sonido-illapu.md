@@ -3,16 +3,16 @@ layout: ../../layouts/LayoutBlog.astro
 title: Quena inspirada en el sonido de Illapu
 author: Domingo Uribe
 description: "Demostración en video de uno de mis modelos de quena inspirada en el sonido clásico de Illapu."
-image: 
-    url: "/vista-horizontal.jpg"
-    alt: "Vista horizontal de la quena sobre un fondo celeste"
+image:
+  url: "/vista-horizontal.jpg"
+  alt: "Vista horizontal de la quena sobre un fondo celeste"
 pubDate: 2024-02-27
-tags: ["quena", "luther ia", "catálogo"]
+tags: ["quena", "illapu"]
 ---
 
 # Quena inspirada en el sonido de Illapu
 
-¿Te gusta el sonido de Illapu? Además de la íconica voz de Erick Maluenda, y la voz de Roberto Marquez, otra característica distintiva de Illapu es el sonido único de sus quenas a lo largo de su historia. Mira este video en donde muestro una de mis quenas diseñada y concebida específicamente para igualar el timbre de Illapu, que comparto aquí como referencia de mis trabajos. 
+¿Te gusta el sonido de Illapu? Además de la íconica voz de Erick Maluenda, y la voz de Roberto Marquez, otra característica distintiva de Illapu es el sonido único de sus quenas a lo largo de su historia. Mira este video en donde muestro una de mis quenas diseñada y concebida específicamente para igualar el timbre de Illapu, que comparto aquí como referencia de mis trabajos.
 
 ¿Te gustaría tener una exactamente igual que esta? Contáctame vía WhatsApp al +56 9 4634 2437 o escríbeme a mi correo uribe.domingo@gmail.com
 
