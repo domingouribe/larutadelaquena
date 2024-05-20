@@ -68,7 +68,7 @@ const dataQuenas: offeringItem[] = [
         image: "/src/assets/offerings/pvc.jpg",
         alt: "Foto quena de PVC - Se muestra todo el instrumento",
         description: "Quena de estudio en material de PVC",
-        priceCLP: 55000,
+        priceCLP: 38000,
         youtubeLink: "https://youtu.be/67PS4Uwyy2A?si=ZMLx2hDdO4YWxOCp",
         detailLink: '/catalog/pvc'
     },
