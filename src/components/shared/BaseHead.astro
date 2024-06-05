@@ -7,12 +7,7 @@ interface Props {
 	canonicalURL?: string;
 }
 
-const {
-	title,
-	description,
-	canonicalURL = "",
-	image = "/MainSiteImage.jpg",
-} = Astro.props;
+const { title, description, canonicalURL = "", image } = Astro.props;
 ---
 
 <!-- Global Metadata -->
