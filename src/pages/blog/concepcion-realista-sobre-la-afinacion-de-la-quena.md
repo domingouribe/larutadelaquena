@@ -12,7 +12,7 @@ tags: ["quena", "lutheria", "tocar la quena", "masterclass", "educación"]
 
 # Concepción realista sobre la afinación de la quena
 
-Muchas gracias por lleagar a esta post de mi Blog. He preparado este video exclusivamente para los visitantes de mi Blog con este interesante tema que sin duda te ayudará a disfrutar más de la quena:
+Muchas gracias por llegar a esta post de mi Blog. He preparado este video exclusivamente para los visitantes de mi Blog con este interesante tema que sin duda te ayudará a disfrutar más de la quena:
 
 <iframe src="https://www.youtube.com/embed/QUKTpN1b8vs?si=ZhJr6oB8E9iugb1u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
