@@ -65,7 +65,7 @@ const dataQuenas: offeringItem[] = [
     {
         id: uuidv4(),
         title: "Quenacho profesional de bambú",
-        image: "/src/assets/offerings/bambu.jpg",
+        image: "/src/assets/offerings/quenacho-bambu.jpg",
         alt: "Foto quenacho de bambú - Se muestra todo el instrumento destacando su color marón oscuro y la perfección de sus orificios y simetría",
         description: "Quenacho profesional fabricada en bambú de primera calidad",
         priceCLP: 105000,
@@ -90,6 +90,16 @@ const dataQuenas: offeringItem[] = [
         description: "Quenacho de estudio en material de PVC",
         priceCLP: 42000,
         youtubeLink: "https://youtu.be/zXf68Kk1Pco",
+        detailLink: '/catalog/pvc'
+    },
+    {
+        id: uuidv4(),
+        title: "Zampoña (Malta)",
+        image: "/src/assets/offerings/zampona-malta.jpg",
+        alt: "Foto zampoña tamaño malta - Se muestra todo el instrumento",
+        description: "Zampoña tamaño malta. Afinación a pedido",
+        priceCLP: 85000,
+        youtubeLink: "https://youtu.be/yYpqlSElw9w?si=9hjeWqhOsdyV9wYo",
         detailLink: '/catalog/pvc'
     },
 ];
