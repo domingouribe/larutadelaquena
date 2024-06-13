@@ -64,12 +64,32 @@ const dataQuenas: offeringItem[] = [
     },
     {
         id: uuidv4(),
+        title: "Quenacho profesional de bambú",
+        image: "/src/assets/offerings/bambu.jpg",
+        alt: "Foto quenacho de bambú - Se muestra todo el instrumento destacando su color marón oscuro y la perfección de sus orificios y simetría",
+        description: "Quenacho profesional fabricada en bambú de primera calidad",
+        priceCLP: 105000,
+        youtubeLink: "https://youtu.be/HzwafdfEsy0",
+        detailLink: '/catalog/quena-bambu'
+    },
+    {
+        id: uuidv4(),
         title: "Quena PVC",
         image: "/src/assets/offerings/pvc.jpg",
         alt: "Foto quena de PVC - Se muestra todo el instrumento",
         description: "Quena de estudio en material de PVC",
         priceCLP: 38000,
-        youtubeLink: "https://youtu.be/67PS4Uwyy2A?si=ZMLx2hDdO4YWxOCp",
+        youtubeLink: "https://youtu.be/wyrgphcybiQ",
+        detailLink: '/catalog/pvc'
+    },
+    {
+        id: uuidv4(),
+        title: "Quenacho PVC",
+        image: "/src/assets/offerings/pvc.jpg",
+        alt: "Foto quenacho de PVC color naranja - Se muestra todo el instrumento",
+        description: "Quenacho de estudio en material de PVC",
+        priceCLP: 42000,
+        youtubeLink: "https://youtu.be/zXf68Kk1Pco",
         detailLink: '/catalog/pvc'
     },
 ];

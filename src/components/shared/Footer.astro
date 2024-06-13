@@ -3,30 +3,32 @@ import Contacts from "../Contacts.astro";
 ---
 
 <footer class="Footer">
-  <div class="Container">
-    <Contacts
-      whatsappNumber="https://wa.me/946342437"
-      emailAddress="mailto:uribe.domingo@gmail.com"
-      facebookUrl="https://www.facebook.com/DomingoUribeCordova"
-      instagramUrl="https://www.instagram.com/larutadelaquena/"
-      youtubeUrl="https://www.youtube.com/@domingouribe"
-    />
-    <p>
-      Desarrollado por Domingo Uribe C, con el hermoso Framework para desarrolo
-      Web <a href="https://astro.build/">Astro Build</a>
-    </p>
-  </div>
+	<div class="Container">
+		<Contacts
+			whatsappNumber="https://wa.me/946342437"
+			emailAddress="mailto:uribe.domingo@gmail.com"
+			facebookUrl="https://www.facebook.com/DomingoUribeCordova"
+			instagramUrl="https://www.instagram.com/larutadelaquena/"
+			youtubeUrl="https://www.youtube.com/@domingouribe"
+		/>
+		<p>
+			Desarrollado por Domingo Uribe C, con <a href="https://astro.build/"
+				>Astro Build</a
+			>
+		</p>
+	</div>
 </footer>
+
 <script>
-  import "../../scripts/menu.js";
+	import "../../scripts/menu";
 </script>
 
 <style lang="scss">
-  .Footer {
-    background-color: var(--uiPurple);
-    padding: 1em;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 4em;
-  }
+	.Footer {
+		background-color: var(--uiPurple);
+		padding: 1em;
+		text-align: center;
+		font-size: 0.9rem;
+		margin-top: 4em;
+	}
 </style>

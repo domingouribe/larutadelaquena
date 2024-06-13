@@ -1,0 +1,25 @@
+{
+	"sitename": "La Ruta de la Quena",
+	"navItems": [
+		{
+			"name": "Inicio",
+			"link": "/"
+		},
+		{
+			"name": "Acerca de mí",
+			"link": "/about"
+		},
+		{
+			"name": "Catálogo",
+			"link": "/catalog"
+		},
+		{
+			"name": "Blog",
+			"link": "/blog"
+		},
+		{
+			"name": "Contáctame",
+			"link": "/contact"
+		}
+	]
+}
