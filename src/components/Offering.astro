@@ -45,7 +45,7 @@ const formattedTotalUSD = totalUSD.toFixed(0); // No especificar decimales para 
 			src={images[image]()}
 			alt={alt}
 			width={400}
-			height={500}
+			height={400}
 			class="Offering-image"
 		/>
 	</div>
@@ -103,12 +103,12 @@ const formattedTotalUSD = totalUSD.toFixed(0); // No especificar decimales para 
 		}
 
 		&-image {
-			aspect-ratio: 4/5;
+			aspect-ratio: 1/1;
 			object-fit: cover;
 			transition: all ease 0.3s;
 			display: block;
-			width: 400px;
-			height: 500px;
+			width: 100%;
+			height: auto;
 
 			&:hover {
 				scale: 1.1;

@@ -155,3 +155,11 @@ iframe {
 .total {
     width: 500px;
 }
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
