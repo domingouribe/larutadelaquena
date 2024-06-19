@@ -6,6 +6,12 @@ interface Props {
 	canonicalURL?: string;
 }
 
+<style>
+@view-transitions {
+navigation: auto;
+}
+</style>
+
 const { title, description, canonicalURL = "", image } = Astro.props;
 ---
 
