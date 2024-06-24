@@ -5,7 +5,7 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import Disclaimer from "./shared/Disclaimer.astro";
 import Button from "./shared/Button.astro";
-import { getFormattedPrices } from "@/scripts/utils";
+import { formatCLP, calculateTotalUSD } from "@/scripts/utils";
 
 const { image, alt, title, description, priceCLP, id, youtubeLink } =
 	Astro.props;
@@ -19,8 +19,11 @@ if (!images[image])
 		`"${image}" does not exist in glob: "src/assets/offerings/*.{jpeg,jpg,png,gif}"`
 	);
 
-// Obtener precios formateados
-const { formattedPriceCLP, formattedTotalUSD } = getFormattedPrices(priceCLP);
+// Formatear el precio en CLP con puntos para miles
+const formattedPriceCLP = formatCLP(priceCLP);
+
+// Calcular y formatear el precio total en dólares
+const formattedTotalUSD = calculateTotalUSD(priceCLP);
 ---
 
 <div class="Offering" id={id}>
@@ -36,22 +39,19 @@ const { formattedPriceCLP, formattedTotalUSD } = getFormattedPrices(priceCLP);
 	<div class="Offering-text">
 		<h1 class="Offering-title">{title}</h1>
 		<p class="Offering-description">{description}</p>
-
-		<div class="Offering-Pricebox">
-			<div class="Offering-price">
-				<span class="CLP">CLP $</span>
-				{formattedPriceCLP}
-				<span class="CLP">(peso chileno)</span>
-			</div>
-
-			<div class="Offering-price">
-				<span class="CLP">USD $</span>
-				{formattedTotalUSD}
-				<span class="CLP">(dólar americano)</span>
-			</div>
+		<div class="Offering-price">
+			<span class="CLP">CLP $</span>
+			{formattedPriceCLP}
 		</div>
 
-		<Disclaimer />
+		<div class="Offering-price">
+			<span class="CLP">USD $</span>
+			{formattedTotalUSD}
+		</div>
+
+		<div class="Disclaimer">
+			<Disclaimer />
+		</div>
 
 		<div class="Offering-buttons">
 			<Button
@@ -118,21 +118,13 @@ const { formattedPriceCLP, formattedTotalUSD } = getFormattedPrices(priceCLP);
 			margin: 0;
 			font-size: 1rem;
 		}
-		&-Pricebox {
-			background-color: rgba(255, 255, 255, 0.137);
-			padding: 0.5em;
-			border-radius: var(--radio-md);
-		}
-		&-price:nth-child(1) {
-			font-size: 2.5rem;
+		&-price {
+			font-size: 1.5rem;
 			font-weight: bold;
 			display: flex;
 			align-items: center;
 			gap: 0.3em;
 			margin: 0;
-		}
-		&-price:nth-child(2) {
-			font-size: 1rem;
 		}
 		.CLP {
 			font-weight: 400;
