@@ -38,6 +38,7 @@ const { formattedPriceCLP, formattedTotalUSD } = getFormattedPrices(priceCLP);
 		<p class="Offering-description">{description}</p>
 
 		<div class="Offering-Pricebox">
+			PRECIO:
 			<div class="Offering-price">
 				<span class="CLP">CLP $</span>
 				{formattedPriceCLP}
@@ -122,6 +123,11 @@ const { formattedPriceCLP, formattedTotalUSD } = getFormattedPrices(priceCLP);
 			background-color: rgba(255, 255, 255, 0.137);
 			padding: 0.5em;
 			border-radius: var(--radio-md);
+			font-size: 20px;
+		}
+
+		&-price {
+			padding: .3em;
 		}
 		&-price:nth-child(1) {
 			font-size: 2.5rem;
@@ -130,6 +136,7 @@ const { formattedPriceCLP, formattedTotalUSD } = getFormattedPrices(priceCLP);
 			align-items: center;
 			gap: 0.3em;
 			margin: 0;
+			border-bottom: 1px solid #ffffff2c;
 		}
 		&-price:nth-child(2) {
 			font-size: 1rem;
