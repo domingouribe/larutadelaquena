@@ -8,9 +8,10 @@ import "@fontsource-variable/urbanist";
 interface Props {
 	title: string;
 	description: string;
+	image: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 ---
 
@@ -18,7 +19,7 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 <html lang="es-CL">
 	<head>
 		<GoogleAnalytics />
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={image} />
 	</head>
 	<body>
 		<Header />
