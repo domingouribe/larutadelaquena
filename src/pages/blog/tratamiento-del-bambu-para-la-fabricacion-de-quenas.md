@@ -1,52 +1,50 @@
 ---
 layout: ../../layouts/LayoutBlog.astro
-title: Tratamiento del bambú para la fabricación de quenas – Método Domingo Uribe
 author: Domingo Uribe
-description: "Desvelo mi método de preparación del bambú desde el momento en que se saca del cañaveral hasta la fabricación"
+title: Tratamiento del bambú para la fabricación de quenas – Método Domingo Uribe
+description: "Mi método de preparación del bambú desde el momento en que se saca del cañaveral hasta la fabricación"
+keywords: "bambú, cómo cortar el bambú, curar el bambú, secar bambú, cosechar bambú"
 image:
-  url: "/src/assets/images/logoQuenaBambu.jpg"
-  alt: "Una quena de bambú con mi firma grabada en láser"
+  url: "/Bamboo.jpg"
+  alt: "Hojas de cañaveral de bambú"
 pubDate: 2024-02-26
 tags: ["quena", "lutheria"]
 ---
 
-# Tratamiento del bambú para la fabricación de quenas – Método Domingo Uribe.
+![Bamboo sheets picture](/Bamboo.jpg)
+Photo by RF.\_.studio: https://www.pexels.com/photo/bamboo-leaves-3060703/
 
 El bambú es una planta que cuenta con innumerables estudios sobre sus diferentes usos y tratamientos específicos para cada uno de estos. Hoy quiero compartir mi método de tratamiento del bambú para la fabricación de quenas.
 
 Antes que todo, deseo reiterar y enfatizar que mis métodos de trabajo están basados principalmente en el sentido común, la experimentación durante más de 25 años y el registro y documentación de los resultados sobre el tratamiento y uso del bambú en el área en que me desempeño: la luthería especializada en quenas.
 
+![Bambú secado natural originario de Copiapó](/public/NaturalBamboo.jpg)
 Bambu en secado natural. Originario de Copiapó
 
 Este punto anterior es importante porque aún mucho antes desde que comenzara a experimentar hasta este preciso momento (viernes 3 de abril de 2020, 20:43 hrs) ha existido mucha información incompleta o sin bases empírica o científica, y hasta muy poco lógica y ridícula, como lo es el «alcohólico» consejo de sumergir las cañas en whisky. ¿Simpático verdad? Pero inútil.
 
 Cuando necesito producir algo me pregunto qué materiales, herramientas y pasos necesito para llevar a cabo el desarrollo de la idea, y el proyecto finalmente. Así es como separo los objetivos principales, y decido cuántos objetivos secundarios también deseo lograr.
 
-Bosque de Bambú en Coquimbo
+![Bosque de bambú en Ovalle](/public/BambooForestOvalle.jpg)
+Bosque de bambú en Ovalle
 
 Lo primero es entender que el tratamiento del bambú es un proceso, que puede conllevar varios pasos, y que no siempre serán necesarios todos esos pasos, y estos pasos variarán según varios factores y estados de la caña de bambú.
 A continuación enumero todos los pasos del uso y tratamiento previo del bambú para la fabricación de la quena que yo sigo, considerando la obtención del material desde un cañaveral, y no ya seco e industrializado:
 
-Cortar la vara del cañaveral
-
-Limpiar y lavar con agua y cloro diluido, o limpiador desinfectante en crema para baños
-Dimensionar las varas a longitudes aproximadas a la medida final de la quena. Si la quena va a medir 380 mm, la corto unos 30 mm más larga
-Abrir un orificio pequeño en el nudo del tubo para que pase aire a través y propiciar la salida del agua y vapor
-
-Dar golpes de calor periódicos en un horno a temperaturas de entre 100 y 150 grados. Este punto es muy importante de acuerdo a mi método basado en el sentido común y los objetivos del proceso. Estos periodos de horneado son de 20 minutos
-Dejar enfriar y revisar que todos los tubos que estén en el horno estén a niveles similares de deshidratación
-
-Repetir el proceso del punto 5 y 6 mínimo unas tres veces
-
-Finalizar el proceso previo dejando a temperatura ambiente y expuesto al sol y aire durante mínimo 30 días
-
-Fabricar la quena. Esto incluye todo el proceso de diseño y desarrollo del instrumento.
-
-Impregnar con aceite de linaza
+1. Cortar la vara del cañaveral
+2. Limpiar y lavar con agua y cloro diluido, o limpiador desinfectante en crema para baños
+3. Dimensionar las varas a longitudes aproximadas a la medida final de la quena. Si la quena va a medir 380 mm, la corto unos 30 mm más larga
+4. Abrir un orificio pequeño en el nudo del tubo para que pase aire a través y propiciar la salida del agua y vapor
+5. Dar golpes de calor periódicos en un horno a temperaturas de entre 100 y 150 grados. Este punto es muy importante de acuerdo a mi método basado en el sentido común y los objetivos del proceso. Estos periodos de horneado son de 20 minutos
+6. Dejar enfriar y revisar que todos los tubos que estén en el horno estén a niveles similares de deshidratación
+7. Repetir el proceso del punto 5 y 6 mínimo unas tres veces
+8. Finalizar el proceso previo dejando a temperatura ambiente y expuesto al sol y aire durante mínimo 30 días
+9. Fabricar la quena. Esto incluye todo el proceso de diseño y desarrollo del instrumento.
+10. Impregnar con aceite de linaza
 
 Una vez que ha finalizado el periodo de 30 días posterior al dimensionado y horneado los tubos están listos para fabricar quenas.
 
-Explicaciones y detalles sobre los puntos del listado:
+## Explicaciones y detalles sobre los puntos del listado:
 
 Punto 3: el dimensionado aproximado tiene como objetivo prevenir deformaciones de las varas en longitudes más largas durante el proceso de deshidratación. Al mismo tiempo permite saber inmediatamente después del horneado si el tubo se iba a deformar naturalmente o no, pues es uno de los efectos de la pérdida de agua acelerada.
 
@@ -71,9 +69,3 @@ Se puede decidir por uno u otro proceso de impregnado, además por el objetivo d
 Todo esto es lo necesario para tratar el bambú según los objetivos que busquemos. Los pasos 5 al 8 pueden saltarse si se desea secar naturalmente. El tiempo mínimo deberá ser de 70 días. Aún así, de hacerlo de esta manera, se puede decidir templar el instrumento según el punto 10.
 
 No es necesario usar cera de abeja ni ungüentos similares para, como se dice «tapar poros». El bambú no tiene poros que dejen escapar aire y que por lo tanto deban ser sellados. Tampoco es necesario cera de abeja ni ungüentos similares para hechizar la quena y, cómo se dice «prevenir mágicamente que se desafine», o dicho de una manera más precisa, que sus átomos se estimulen y se expanda o contraiga la masa y acelere o disminuya la velocidad del sonido en el aire por la acción del frío o calor cambiando su frecuencia general de manera temporal. El uso de estos ungüentos no es técnicamente necesario para mejorar sonido ni prevenir desafinaciones, sino estético. Por eso yo no lo uso.
-
-Bambú de Ovalle, recién cosechado
-
-Atentamente, Domingo Uribe
-
-Luthier especializado en quenas

@@ -4,7 +4,7 @@ import BaseHead from "@/components/shared/BaseHead.astro";
 import Header from "@/components/shared/Header.astro";
 import Footer from "@/components/shared/Footer.astro";
 import "@fontsource-variable/urbanist";
-const { title, description, frontmatter } = Astro.props;
+const { title, description, keywords, frontmatter } = Astro.props;
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 ---
 
@@ -12,12 +12,19 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 <html lang="es-CL">
 	<head>
 		<GoogleAnalytics />
-		<BaseHead title={frontmatter?.title ?? title} description={description} />
+		<BaseHead
+			title={frontmatter?.title ?? title}
+			description={description}
+			keywords={frontmatter.keywords}
+		/>
 		<style is:global lang="scss">
 			.Post-full img {
-				width: 100%;
-				height: auto;
-				aspect-ratio: 19/9;
+				width: auto;
+				max-height: 500px;
+				aspect-ratio: 6/2;
+				object-fit: cover;
+				display: block;
+				margin-bottom: 0.5em;
 
 				h1 {
 					font-size: 3rem;
@@ -30,7 +37,9 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 		<main>
 			<div class="Container">
 				<div class="Post-full">
+					<h1>{frontmatter.title}</h1>
 					<slot />
+					<p class="author">Por {frontmatter.author}</p>
 				</div>
 			</div>
 		</main>

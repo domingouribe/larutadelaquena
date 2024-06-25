@@ -1,19 +1,18 @@
-@use './normalize';
+// @use './normalize';
+
+@import 'node_modules/normalize.css';
 
 :root {
     --main-font: 'Urbanist Variable',
         sans-serif;
     //Colors: 
-    --uiGreen: rgb(0, 196, 140);
     --uiYellow: rgb(255, 207, 92);
     --uiBlue: rgb(102, 181, 248);
-    --uiWhite: #f0f0f0;
     --uiGray: rgb(224, 224, 224);
     --uiGrayMedium: rgb(70, 70, 70);
     --uiGrayDark: rgb(39, 39, 39);
     --uiBlack: rgb(26, 12, 51);
-    --uiPink: rgb(255, 100, 124);
-    --uiBrown: rgb(128, 70, 23);
+    --uiBrown: rgb(139, 74, 20);
     --uiPurple: rgba(24, 1, 27, 0.068);
     --uiPurpleLight: rgba(233, 199, 238, 0.089);
     --radio-sm: 4px;
@@ -21,7 +20,37 @@
     --radio-l: 12px;
     --radio-xl: 16px;
     --radio-xxl: 24px;
+    // Background and text color:
+    color-scheme: light dark;
+    --ui-dark-background: rgb(26, 12, 51);
+    --ui-light-background: #e4e4e4;
+    --ui-black: #1d1d1d;
+    --ui-white: #f3f3f3;
 
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--ui-light-background);
+        color: var(--ui-black);
+    }
+
+    a {
+        color: var(--uiPurple);
+        font-weight: 500;
+    }
+
+    a:hover {
+        color: var(--uiGreen);
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--ui-dark-background);
+        color: var(--ui-white);
+    }
 }
 
 html {
@@ -39,9 +68,7 @@ html {
 body {
     line-height: 1.7;
     height: 100vh;
-    font-size: 17px;
-    background-color: var(--uiBlack);
-    color: var(--uiWhite);
+    font-size: 18px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -135,6 +162,12 @@ main {
             /* Ajusta el tamaño de la descripción para dispositivos móviles */
         }
     }
+}
+
+.author {
+    font-size: .9rem;
+    font-weight: 700;
+    font-style: italic;
 }
 
 
