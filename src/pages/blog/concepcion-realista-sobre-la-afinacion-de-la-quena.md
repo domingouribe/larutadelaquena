@@ -3,6 +3,7 @@ layout: ../../layouts/LayoutBlog.astro
 title: Concepción realista sobre la afinación de la quena
 author: Domingo Uribe
 description: "Cómo concebir de manera realista la afinación de la quena para lograr disfrutar de ella y evitar frustraciones"
+keywords: "afinación de la quena, cómo afinar la quena, cómo sonar bien en la quena, sonido de la quena, quena de bambú"
 image:
   url: "/cover-post-concepcion-afinacion.jpg"
   alt: "Captura de pantalla escena del video. Aparezco tocando un quenacho y se ve un afinador electrónico marcando la nota G4"

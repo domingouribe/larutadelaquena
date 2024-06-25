@@ -3,6 +3,7 @@ layout: ../../layouts/LayoutBlog.astro
 title: Dos maneras de soplar la quena ¿Cuál esas actualmente?
 author: Domingo Uribe
 description: "Muestro dos maneras que existen de soplar la quena, y que diferencia grandemente a un quenista experimentado de los principiantes"
+keywords: "cómo soplar la quena, cómo hacer sonar la quena, sonido de la quena, obtener el sonido de la quena"
 image:
   url: "/logoQuenaBambu.jpg"
   alt: "Una quena de bambí con mi firma grabada en láser"

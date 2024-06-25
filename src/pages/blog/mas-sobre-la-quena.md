@@ -3,6 +3,7 @@ layout: ../../layouts/LayoutBlog.astro
 title: Más sobre la quena
 author: Domingo Uribe
 description: "Breve historia de una de mis quenas personales"
+keywords: "quena, quena en sol, sol mayor, quena de bambú"
 image:
   url: "/logoQuenaBambu.jpg"
   alt: "Una quena de bambí con mi firma grabada en láser"

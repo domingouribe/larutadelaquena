@@ -7,15 +7,16 @@ interface Props {
 	description: string;
 	image?: string;
 	canonicalURL?: string;
+	keywords: string;
 }
 
-const { title, description, canonicalURL = "", image } = Astro.props;
+const { title, description, canonicalURL, keywords = "", image } = Astro.props;
 ---
 
 <style>
-  @view-transition {
-    navigation: auto; /* enabled! */
-  }
+	@view-transition {
+		navigation: auto; /* enabled! */
+	}
 </style>
 
 <!-- Global Metadata -->

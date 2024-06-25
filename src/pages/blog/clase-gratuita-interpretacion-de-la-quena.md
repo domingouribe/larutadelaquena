@@ -2,7 +2,8 @@
 layout: ../../layouts/LayoutBlog.astro
 title: Clase gratuita interpretación de la quena
 author: Domingo Uribe
-description: "Comparto consejos que en su momento fueron privados, y ahora son público para beneficio de todos"
+description: "Aprende a sopplar la quena correctamente"
+keywords: "tocar la quena, aprende a tocar la quena, clase gratuita, cómo tocar correctamente la quena"
 image:
   url: "/logoQuenaBambu.jpg"
   alt: "Una quena de bambú con mi firma grabada en láser"

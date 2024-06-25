@@ -3,6 +3,7 @@ layout: ../../layouts/LayoutBlog.astro
 title: Taller Online ¿Fórmulas para la Fabricar Quena?
 author: Domingo Uribe
 description: "Inscríbete en mi 'Taller Online Fórmulas para la Fabricación de la Quena' y aprende cómo yo veo las fórmulas, cómo las entiendo, y cómo las utilizo en mi trabajo diario"
+keywords: "Fórmulas, planos, cómo hacer quenas"
 image:
   url: "/logoQuenaBambu.jpg"
   alt: "Una quena de bambí con mi firma grabada en láser"
