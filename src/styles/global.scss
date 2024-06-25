@@ -1,18 +1,19 @@
-// @use './normalize';
-
-@import 'node_modules/normalize.css';
+@use './normalize';
 
 :root {
     --main-font: 'Urbanist Variable',
         sans-serif;
     //Colors: 
+    --uiGreen: rgb(0, 196, 140);
     --uiYellow: rgb(255, 207, 92);
     --uiBlue: rgb(102, 181, 248);
+    --uiWhite: #f0f0f0;
     --uiGray: rgb(224, 224, 224);
     --uiGrayMedium: rgb(70, 70, 70);
     --uiGrayDark: rgb(39, 39, 39);
     --uiBlack: rgb(26, 12, 51);
-    --uiBrown: rgb(139, 74, 20);
+    --uiPink: rgb(255, 100, 124);
+    --uiBrown: rgb(128, 70, 23);
     --uiPurple: rgba(24, 1, 27, 0.068);
     --uiPurpleLight: rgba(233, 199, 238, 0.089);
     --radio-sm: 4px;
@@ -20,55 +21,27 @@
     --radio-l: 12px;
     --radio-xl: 16px;
     --radio-xxl: 24px;
-    // Background and text color:
-    color-scheme: light dark;
-    --ui-dark-background: rgb(26, 12, 51);
-    --ui-light-background: #e4e4e4;
-    --ui-black: #1d1d1d;
-    --ui-white: #f3f3f3;
 
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--ui-light-background);
-        color: var(--ui-black);
-    }
-
-    a {
-        color: var(--uiPurple);
-        font-weight: 500;
-    }
-
-    a:hover {
-        color: var(--uiGreen);
-    }
-
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--ui-dark-background);
-        color: var(--ui-white);
-    }
 }
 
 html {
-    font-family: var(--main-font);
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  font-family: var(--main-font);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
     line-height: 1.7;
     height: 100vh;
-    font-size: 18px;
+    font-size: 17px;
+    background-color: var(--uiBlack);
+    color: var(--uiWhite);
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -76,128 +49,119 @@ body {
 }
 
 a {
-    color: var(--uiWhite);
-    text-decoration: underline;
+  color: var(--uiWhite);
+  text-decoration: underline;
 
-    &:hover {
-        color: var(--uiYellow);
-    }
+  &:hover {
+    color: var(--uiYellow);
+  }
 }
 
 main {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  flex: 1;
 }
 
 .Container {
-    display: inherit;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    flex: inherit;
-    flex-flow: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    padding: 0 1em;
-    position: relative;
-    gap: inherit;
-    grid-auto-rows: inherit;
-    grid-template-columns: inherit;
-    grid-auto-flow: inherit;
+  display: inherit;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  flex: inherit;
+  flex-flow: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  padding: 0 1em;
+  position: relative;
+  gap: inherit;
+  grid-auto-rows: inherit;
+  grid-template-columns: inherit;
+  grid-auto-flow: inherit;
 }
 
 .Section-title {
-    margin: 0;
+  margin: 0;
 }
 
 .Page {
-    padding: 0;
+  padding: 0;
 
+  &-title {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  &-description {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .Post-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Tablet Styles */
+  @media only screen and (max-width: 768px) {
     &-title {
-        font-size: 2rem;
-        margin: 0;
+      font-size: 1.5rem;
+      /* Ajusta el tamaño del título para tablet */
     }
 
     &-description {
-        font-size: 1.1rem;
-        margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  /* Mobile Styles */
+  @media only screen and (max-width: 480px) {
+    &-title {
+      font-size: 1.5rem;
+      /* Ajusta el tamaño del título para dispositivos móviles */
     }
 
-    .Post-image {
-        display: block;
-        width: 100%;
-        max-width: 900px;
-        height: auto;
+    &-description {
+      font-size: 1rem;
+      /* Ajusta el tamaño de la descripción para dispositivos móviles */
     }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    /* Tablet Styles */
-    @media only screen and (max-width: 768px) {
-        &-title {
-            font-size: 1.5rem;
-            /* Ajusta el tamaño del título para tablet */
-        }
-
-        &-description {
-            font-size: 1rem;
-        }
-    }
-
-    /* Mobile Styles */
-    @media only screen and (max-width: 480px) {
-
-
-        &-title {
-            font-size: 1.5rem;
-            /* Ajusta el tamaño del título para dispositivos móviles */
-        }
-
-        &-description {
-            font-size: 1rem;
-            /* Ajusta el tamaño de la descripción para dispositivos móviles */
-        }
-    }
-}
-
-.author {
-    font-size: .9rem;
-    font-weight: 700;
-    font-style: italic;
+  }
 }
 
 
 
 .SocialIcon {
-    width: 24px;
+  width: 24px;
 }
 
 section {
-    display: flex;
-    flex-flow: column nowrap;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 article {
-    flex: 1
+  flex: 1;
 }
 
 iframe {
-    aspect-ratio: 19 / 9;
-    width: 100%;
+  aspect-ratio: 19 / 9;
+  width: 100%;
 }
 
 .total {
-    width: 500px;
+  width: 500px;
 }
-
 
 /* Mobile Styles */
 @media only screen and (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
+  body {
+    font-size: 14px;
+  }
 }

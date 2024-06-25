@@ -8,149 +8,151 @@ import Button from "./shared/Button.astro";
 import { getFormattedPrices } from "@/scripts/utils";
 
 const { image, alt, title, description, priceCLP, id, youtubeLink } =
-	Astro.props;
+  Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/offerings/*.{jpeg,jpg,png,gif}"
+  "/src/assets/offerings/*.{jpeg,jpg,png,gif}"
 );
 
 if (!images[image])
-	throw new Error(
-		`"${image}" does not exist in glob: "src/assets/offerings/*.{jpeg,jpg,png,gif}"`
-	);
+  throw new Error(
+    `"${image}" does not exist in glob: "src/assets/offerings/*.{jpeg,jpg,png,gif}"`
+  );
 
 // Obtener precios formateados
 const { formattedPriceCLP, formattedTotalUSD } = getFormattedPrices(priceCLP);
 ---
 
 <div class="Offering" id={id}>
-	<div class="OfferingImageBox">
-		<Image
-			src={images[image]()}
-			alt={alt}
-			width={400}
-			height={400}
-			class="Offering-image"
-		/>
-	</div>
-	<div class="Offering-text">
-		<h1 class="Offering-title">{title}</h1>
-		<p class="Offering-description">{description}</p>
+  <div class="OfferingImageBox">
+    <Image
+      src={images[image]()}
+      alt={alt}
+      width={400}
+      height={400}
+      class="Offering-image"
+    />
+  </div>
+  <div class="Offering-text">
+    <h1 class="Offering-title">{title}</h1>
+    <p class="Offering-description">{description}</p>
+    <span class="PriceTag">Precio <Disclaimer /></span>
 
-		<span class="PriceTag">Precio</span>
-		<div class="Offering-Pricebox">
-			<div class="Offering-price">
-				<span class="CLP">CLP $</span>
-				{formattedPriceCLP}
-				<span class="CLP">(peso chileno)</span>
-			</div>
+    <div class="Offering-Pricebox">
+      <div class="Offering-price">
+        <span class="CLP">CLP</span>
+        {formattedPriceCLP}
+        <span class="CLP">(peso chileno)</span>
+      </div>
 
-			<div class="Offering-price">
-				<span class="CLP">USD $</span>
-				{formattedTotalUSD}
-				<span class="CLP">(dólar americano)</span>
-			</div>
-		</div>
-
-		<Disclaimer />
-
-		<div class="Offering-buttons">
-			<Button
-				link={youtubeLink}
-				buttonText="Mírala en YouTube"
-				classes="Button Button-primary Button-sm"
-			/>
-			<Button
-				link={"/contact"}
-				buttonText="Contáctame"
-				classes="Button Button-sm"
-			/>
-		</div>
-	</div>
+      <div class="Offering-price">
+        <span class="CLP">USD</span>
+        {formattedTotalUSD}
+        <span class="CLP">(dólar americano)</span>
+      </div>
+    </div>
+    <div class="Offering-buttons">
+      <Button
+        link={youtubeLink}
+        buttonText="Mírala en YouTube"
+        classes="Button Button-primary Button-sm"
+      />
+      <Button
+        link={"/contact"}
+        buttonText="Contáctame"
+        classes="Button Button-sm"
+      />
+    </div>
+  </div>
 </div>
 
 <style lang="scss">
-	.Offering {
-		display: flex;
-		flex-flow: column nowrap;
-		// background-color: var(--uiGrayDark);
-		background-color: var(--uiPurpleLight);
-		height: fit-content;
-		color: whitesmoke;
-		gap: 0.4em;
-		border-radius: 0.5em;
-		overflow: hidden;
-		flex-grow: 1;
-		justify-content: center;
-		text-align: left;
-		line-height: 1.2;
-		min-width: 18em;
+  .Offering {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--uiPurpleLight);
+    height: fit-content;
+    color: whitesmoke;
+    gap: 0.4em;
+    border-radius: 0.5em;
+    overflow: hidden;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: left;
+    line-height: 1.2;
+    min-width: 18em;
+    padding: 0.5em;
+    position: relative;
 
-		.OfferingImageBox {
-			overflow: hidden;
-		}
+    .OfferingImageBox {
+      overflow: hidden;
+    }
 
-		&-image {
-			aspect-ratio: 1/1;
-			object-fit: cover;
-			transition: all ease 0.3s;
-			display: block;
-			width: 100%;
-			height: auto;
+    &-image {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      transition: all ease 0.3s;
+      display: block;
+      width: 100%;
+      height: auto;
 
-			&:hover {
-				scale: 1.1;
-				overflow: hidden;
-			}
-		}
-		&-text {
-			padding: 0.3em;
-			display: flex;
-			flex-flow: column nowrap;
-			gap: 1em;
-		}
-		&-title {
-			margin: 0;
-			font-size: 1.1rem;
-			font-weight: bolder;
-		}
-		&-description {
-			margin: 0;
-		}
-		&-Pricebox {
-			background-color: rgba(255, 255, 255, 0.137);
-			padding: 0 0.5em;
-			border-radius: var(--radio-md);
-			font-size: 20px;
-		}
-		.PriceTag {
-			font-size: 1.1rem;
-			font-weight: 500;
-		}
-		&-price {
-			padding: 0.3em 0;
-		}
-		&-price:nth-child(1) {
-			font-size: 2.5rem;
-			font-weight: bold;
-			display: flex;
-			align-items: center;
-			gap: 0.3em;
-			margin: 0;
-			border-bottom: 1px solid #ffffff2c;
-		}
-		&-price:nth-child(2) {
-			font-size: 1rem;
-		}
-		.CLP {
-			font-weight: 400;
-			font-size: 0.8rem;
-		}
+      &:hover {
+        scale: 1.1;
+        overflow: hidden;
+      }
+    }
+    &-text {
+      padding: 0.3em;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1em;
+    }
+    &-title {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: bolder;
+    }
+    &-description {
+      margin: 0;
+    }
+    &-Pricebox {
+      background-color: rgba(255, 255, 255, 0.137);
+      padding: 0 0.5em;
+      border-radius: var(--radio-md);
+      font-size: 20px;
+      position: relative;
+    }
+    .PriceTag {
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: flex;
+      gap: 1em;
+    }
+    &-price {
+      padding: 0.3em 0;
+    }
+    &-price:nth-child(1) {
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      margin: 0;
+      border-bottom: 1px solid #ffffff2c;
+    }
+    &-price:nth-child(2) {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .CLP {
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
 
-		&-buttons {
-			display: flex;
-			gap: 1em;
-			justify-content: flex-start;
-		}
-	}
+    &-buttons {
+      display: flex;
+      gap: 1em;
+      justify-content: flex-start;
+    }
+  }
 </style>

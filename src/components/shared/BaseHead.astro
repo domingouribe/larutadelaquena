@@ -1,19 +1,21 @@
 ---
+// Supports weights 300-900
+import "@fontsource-variable/figtree";
+
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
 	canonicalURL?: string;
-	keywords: string;
 }
 
-const { title, description, keywords, canonicalURL = "", image } = Astro.props;
+const { title, description, canonicalURL = "", image } = Astro.props;
 ---
 
 <style>
-	@view-transition {
-		navigation: auto; /* enabled! */
-	}
+  @view-transition {
+    navigation: auto; /* enabled! */
+  }
 </style>
 
 <!-- Global Metadata -->
