@@ -3,37 +3,40 @@ import "@/styles/global.scss";
 import BaseHead from "@/components/shared/BaseHead.astro";
 import Header from "@/components/shared/Header.astro";
 import Footer from "@/components/shared/Footer.astro";
-import "@fontsource-variable/urbanist";
-const { title, description, frontmatter } = Astro.props;
+const { title, description, keywords, frontmatter } = Astro.props;
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 ---
 
 <!doctype html>
 <html lang="es-CL">
-	<head>
-		<GoogleAnalytics />
-		<BaseHead title={frontmatter?.title ?? title} description={description} />
-		<style is:global lang="scss">
-			.Post-full img {
-				width: 100%;
-				height: auto;
-				aspect-ratio: 19/9;
+  <head>
+    <GoogleAnalytics />
+    <BaseHead
+      title={frontmatter?.title ?? title}
+      description={description}
+      keywords={keywords}
+    />
+    <style is:global lang="scss">
+      .Post-full img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 19/9;
 
-				h1 {
-					font-size: 3rem;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<div class="Container">
-				<div class="Post-full">
-					<slot />
-				</div>
-			</div>
-		</main>
-		<Footer />
-	</body>
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="Container">
+        <div class="Post-full">
+          <slot />
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>
