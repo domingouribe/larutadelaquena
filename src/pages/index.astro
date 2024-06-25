@@ -8,26 +8,29 @@ import offerings from "../data/dataQuenas";
 ---
 
 <Layout
-	title="La Ruta de la Quena, el catálogo Web del luthier Domingo Uribe."
-	description="Domingo Uribe. Soy Luthier y educador, especializado en la fabricación de la quena de alto nivel. Realizo investigación para el diseño y desarrollo permanente de la quena y vendo directamente mis instrumentos através de este medio y mis redes sociales.">
-	<Hero
-		preTitle="Bienvenidos a"
-		title="La Ruta de La Quena"
-		body="Hola. Soy Domingo Uribe, luthier especializado en el diseño y fabricación de la quena. Este es mi Catálogo Web de instrumentos musicales, educación y servicios."
-	/>
+  title="La Ruta de la Quena - Quenas profesionales de Domingo Uribe"
+  description="Luthier especializado en la fabricación de quenas profesionales de bambú, ébano y otras maderas de lujo. Vendo directamente. Envío a todo el mundo."
+  keywords="Quena, quenas profesionales, quena de bambú, quena de ébano"
+>
+  <Hero
+    preTitle="La Ruta de la Quena"
+    title="Quenas profesionales de Domingo Uribe"
+    body="Soy Domingo Uribe, luthier especializado en el diseño y fabricación de la quena. Este es mi Catálogo de quenas profesionales."
+  />
 
-	<OfferingContainer
-		title="Instrumentos destacados"
-		description="Estos son mis instrumentos destacados.">
-		{offerings.slice(0, 3).map((item) => <Offering {...item} />)}
-	</OfferingContainer>
+  <OfferingContainer
+    title="Instrumentos destacados"
+    description="Estos son mis instrumentos destacados."
+  >
+    {offerings.slice(0, 3).map((item) => <Offering {...item} />)}
+  </OfferingContainer>
 
-	<div class="Container">
-		<Button
-			link="/catalog"
-			buttonText="Mira mi catálogo completo"
-			classes="Button Button-lg Button-center Button-mt"
-			target="_self"
-		/>
-	</div>
+  <div class="Container">
+    <Button
+      link="/catalog"
+      buttonText="Mira mi catálogo completo"
+      classes="Button Button-lg Button-center Button-mt"
+      target="_self"
+    />
+  </div>
 </Layout>
