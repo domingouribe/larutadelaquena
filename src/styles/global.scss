@@ -1,26 +1,26 @@
 @use './normalize';
 
 :root {
-    --main-font: 'Urbanist Variable',
-        sans-serif;
-    //Colors: 
-    --uiGreen: rgb(0, 196, 140);
-    --uiYellow: rgb(255, 207, 92);
-    --uiBlue: rgb(102, 181, 248);
-    --uiWhite: #f0f0f0;
-    --uiGray: rgb(224, 224, 224);
-    --uiGrayMedium: rgb(70, 70, 70);
-    --uiGrayDark: rgb(39, 39, 39);
-    --uiBlack: rgb(26, 12, 51);
-    --uiPink: rgb(255, 100, 124);
-    --uiBrown: rgb(128, 70, 23);
-    --uiPurple: rgba(24, 1, 27, 0.068);
-    --uiPurpleLight: rgba(233, 199, 238, 0.089);
-    --radio-sm: 4px;
-    --radio-md: 8px;
-    --radio-l: 12px;
-    --radio-xl: 16px;
-    --radio-xxl: 24px;
+  --main-font: "Noto Sans",
+    sans-serif;
+  //Colors: 
+  --uiGreen: rgb(0, 196, 140);
+  --uiYellow: rgb(255, 207, 92);
+  --uiBlue: rgb(102, 181, 248);
+  --uiWhite: #f0f0f0;
+  --uiGray: rgb(224, 224, 224);
+  --uiGrayMedium: rgb(70, 70, 70);
+  --uiGrayDark: rgb(39, 39, 39);
+  --uiBlack: rgb(26, 12, 51);
+  --uiPink: rgb(255, 100, 124);
+  --uiBrown: rgb(128, 70, 23);
+  --uiPurple: rgba(24, 1, 27, 0.068);
+  --uiPurpleLight: rgba(233, 199, 238, 0.089);
+  --radio-sm: 4px;
+  --radio-md: 8px;
+  --radio-l: 12px;
+  --radio-xl: 16px;
+  --radio-xxl: 24px;
 
 }
 
@@ -28,6 +28,10 @@ html {
   font-family: var(--main-font);
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 *,
@@ -37,15 +41,15 @@ html {
 }
 
 body {
-    line-height: 1.7;
-    height: 100vh;
-    font-size: 17px;
-    background-color: var(--uiBlack);
-    color: var(--uiWhite);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    padding-top: 63px;
+  line-height: 1.7;
+  height: 100vh;
+  font-size: 17px;
+  background-color: var(--uiBlack);
+  color: var(--uiWhite);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding-top: 63px;
 }
 
 a {

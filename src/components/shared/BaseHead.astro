@@ -1,16 +1,15 @@
 ---
 // Supports weights 300-900
 import "@fontsource-variable/figtree";
-
+import "@/styles/global.scss";
 interface Props {
 	title: string;
 	description: string;
-	image?: string;
-	canonicalURL: string;
-	keywords: string;
+	image: string;
+	canonicalURL?: string;
 }
 
-const { title, description, canonicalURL, keywords = "", image } = Astro.props;
+const { title, description, canonicalURL = "", image } = Astro.props;
 ---
 
 <style>
@@ -25,6 +24,14 @@ const { title, description, canonicalURL, keywords = "", image } = Astro.props;
 <link rel="icon" type="image/png" href="/favicon.png" />
 <meta name="generator" content={Astro.generator} />
 
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+	rel="stylesheet"
+/>
+
 <!-- Canonical URL -->
 <link rel="canonical" href={new URL(canonicalURL, Astro.url)} />
 
@@ -32,7 +39,6 @@ const { title, description, canonicalURL, keywords = "", image } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<meta name="keywords" content={keywords} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />

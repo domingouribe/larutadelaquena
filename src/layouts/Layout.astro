@@ -1,5 +1,4 @@
 ---
-import "@/styles/global.scss";
 import BaseHead from "@/components/shared/BaseHead.astro";
 import Header from "@/components/shared/Header.astro";
 import Footer from "@/components/shared/Footer.astro";
@@ -7,12 +6,10 @@ import Footer from "@/components/shared/Footer.astro";
 interface Props {
 	title: string;
 	description: string;
-	image?: string;
-	keywords: string;
-	canonicalURL: string;
+	image: string;
 }
 
-const { title, description, image, keywords, canonicalURL } = Astro.props;
+const { title, description, image } = Astro.props;
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 ---
 
@@ -20,13 +17,7 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 <html lang="es-CL">
 	<head>
 		<GoogleAnalytics />
-		<BaseHead
-			canonicalURL={canonicalURL}
-			keywords={keywords}
-			title={title}
-			description={description}
-			image={image}
-		/>
+		<BaseHead title={title} description={description} image={image} />
 	</head>
 	<body>
 		<Header />

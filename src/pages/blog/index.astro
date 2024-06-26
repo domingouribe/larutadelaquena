@@ -8,7 +8,7 @@ const posts = await Astro.glob("../blog/*.md");
 <LayoutBlog
 	title="Blog - Mis artículos sobre la quena"
 	description="Lee aquí todos mis contenidos acerca de la quena, música y arte en general"
-	keywords="quena, noticias">
+	image="/MainSiteImage.jpg">
 	<h1 class="Section-title">Blog</h1>
 	<div class="Posts">
 		{posts.map((post) => <PostPreviewCard post={post} />)}
