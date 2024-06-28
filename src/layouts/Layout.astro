@@ -20,6 +20,15 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 		<BaseHead title={title} description={description} image={image} />
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-WF2J4JBC"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"></iframe></noscript
+		>
+		<!-- End Google Tag Manager (noscript) -->
 		<Header />
 		<main>
 			<slot />
