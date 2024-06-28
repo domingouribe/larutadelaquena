@@ -69,7 +69,7 @@ const dataQuenas: offeringItem[] = [
     image: "/src/assets/offerings/quenacho-bambu.jpg",
     alt: "Foto quenacho de bambú - Se muestra todo el instrumento destacando su color marón oscuro y la perfección de sus orificios y simetría",
     description: "Quenacho profesional fabricada en bambú de primera calidad",
-    priceCLP: 85000,
+    priceCLP: 115000,
     youtubeLink: "https://youtu.be/HzwafdfEsy0",
     detailLink: "/catalog/quena-bambu",
   },
