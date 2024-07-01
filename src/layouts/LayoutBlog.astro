@@ -2,8 +2,8 @@
 import BaseHead from "@/components/shared/BaseHead.astro";
 import Header from "@/components/shared/Header.astro";
 import Footer from "@/components/shared/Footer.astro";
-// const { title, description, frontmatter, image } = Astro.props;
-const { title, frontmatter } = Astro.props;
+const { title, description, frontmatter, image } = Astro.props;
+// const { title, frontmatter } = Astro.props;
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 ---
 
@@ -13,8 +13,8 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics.astro";
 		<GoogleAnalytics />
 		<BaseHead
 			title={frontmatter?.title ?? title}
-			description={frontmatter.description}
-			image={frontmatter.image}
+			description={frontmatter?.description ?? description}
+			image={frontmatter?.image ?? image}
 		/>
 		<style is:global lang="scss">
 			.Post-full img {
