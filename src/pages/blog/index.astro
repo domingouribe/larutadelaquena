@@ -2,7 +2,33 @@
 import LayoutBlog from "@/layouts/LayoutBlog.astro";
 import PostPreviewCard from "@/components/shared/PostPreviewCard.astro";
 
+// Definir el tipo de los posts
+type Frontmatter = {
+	pubDate: string;
+	title: string;
+	author: string;
+	description: string;
+	keywords: string[];
+	image: {
+		url: string;
+		alt: string;
+	};
+	tags: string[];
+};
+
+type Post = {
+	frontmatter: Frontmatter;
+	// otros campos que puedas necesitar
+};
+
 const posts = await Astro.glob("../blog/*.md");
+
+// Ordenar los posts por fecha de publicación (pubDate)
+posts.sort(
+	(a, b) =>
+		new Date(b.frontmatter.pubDate).getTime() -
+		new Date(a.frontmatter.pubDate).getTime()
+);
 ---
 
 <LayoutBlog
