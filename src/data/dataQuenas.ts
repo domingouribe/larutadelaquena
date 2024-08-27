@@ -4,6 +4,16 @@ import type { offeringItem } from "../types/types";
 const dataQuenas: offeringItem[] = [
   {
     id: uuidv4(),
+    title: "Quena profesional en bambú",
+    image: "/src/assets/offerings/bambu.jpg",
+    alt: "Foto quena de bambú - Se muestra todo el instrumento destacando su color marón amarillo claro y la perfección de sus orificios y simetría",
+    description: "Quena profesional fabricada en bambú de primera calidad.",
+    priceCLP: 55000,
+    youtubeLink: "https://youtu.be/67PS4Uwyy2A?si=ZMLx2hDdO4YWxOCp",
+    detailLink: "/catalog/quena-bambu",
+  },
+  {
+    id: uuidv4(),
     title: "Quena de lujo en madera de ébano africano",
     image: "/src/assets/offerings/ebano-africano.jpg",
     alt: "Quena de ébano. Luce su color negro brillante. Se puede ver el instrumento completo en perspectiva.",
@@ -53,16 +63,7 @@ const dataQuenas: offeringItem[] = [
     youtubeLink: "https://youtu.be/fdwPbf0Ipls?si=vCwA2feOzcKDhHxB",
     detailLink: "/catalog/quena-jacaranda",
   },
-  {
-    id: uuidv4(),
-    title: "Quena profesional en bambú",
-    image: "/src/assets/offerings/bambu.jpg",
-    alt: "Foto quena de bambú - Se muestra todo el instrumento destacando su color marón amarillo claro y la perfección de sus orificios y simetría",
-    description: "Quena profesional fabricada en bambú de primera calidad.",
-    priceCLP: 55000,
-    youtubeLink: "https://youtu.be/67PS4Uwyy2A?si=ZMLx2hDdO4YWxOCp",
-    detailLink: "/catalog/quena-bambu",
-  },
+
   {
     id: uuidv4(),
     title: "Quenacho profesional de bambú",
