@@ -8,7 +8,7 @@ const dataQuenas: offeringItem[] = [
     image: "/src/assets/offerings/bambu.jpg",
     alt: "Foto quena de bambú - Se muestra todo el instrumento destacando su color marón amarillo claro y la perfección de sus orificios y simetría",
     description: "Quena profesional fabricada en bambú de primera calidad.",
-    priceCLP: 55000,
+    priceCLP: 75000,
     youtubeLink: "https://youtu.be/67PS4Uwyy2A?si=ZMLx2hDdO4YWxOCp",
     detailLink: "/catalog/quena-bambu",
   },
